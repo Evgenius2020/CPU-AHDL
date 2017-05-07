@@ -1,0 +1,100 @@
+-- MAX+plus II Compiler Fit File      
+-- Version 9.6 3/22/2000              
+-- Compiled: 05/07/2017 18:01:37      
+
+-- Copyright (C) 1988-2000 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+CHIP "memu"
+BEGIN
+
+    DEVICE = "EP1K30TC144-1";
+
+    "addr0"                        : INPUT_PIN  = 30     ;
+    "addr1"                        : INPUT_PIN  = 141    ;
+    "addr2"                        : INPUT_PIN  = 132    ;
+    "addr3"                        : INPUT_PIN  = 117    ;
+    "addr4"                        : INPUT_PIN  = 12     ;
+    "addr5"                        : INPUT_PIN  = 99     ;
+    "addr6"                        : INPUT_PIN  = 27     ;
+    "addr7"                        : INPUT_PIN  = 26     ;
+    "result0"                      : OUTPUT_PIN = 51     ;
+    "result1"                      : OUTPUT_PIN = 118    ;
+    "result2"                      : OUTPUT_PIN = 73     ;
+    "result3"                      : OUTPUT_PIN = 86     ;
+    "result4"                      : OUTPUT_PIN = 122    ;
+    "result5"                      : OUTPUT_PIN = 91     ;
+    "result6"                      : OUTPUT_PIN = 13     ;
+    "result7"                      : OUTPUT_PIN = 102    ;
+    "result0~fit~in1"              : LOCATION   = LC2_E19;
+    "result1~fit~in1"              : LOCATION   = LC1_E9 ;
+    "result2~fit~in1"              : LOCATION   = LC2_E2 ;
+    "result3~fit~in1"              : LOCATION   = LC4_E11;
+    "result4~fit~in1"              : LOCATION   = LC4_E17;
+    "result5~fit~in1"              : LOCATION   = LC3_D3 ;
+    "result6~fit~in1"              : LOCATION   = LC3_E23;
+    "result7~fit~in1"              : LOCATION   = LC1_A13;
+    "|lpm_rom:mem|altrom:srom|segment0_0" : LOCATION   = EC4_E  ;
+    "|lpm_rom:mem|altrom:srom|segment0_1" : LOCATION   = EC11_E ;
+    "|lpm_rom:mem|altrom:srom|segment0_2" : LOCATION   = EC3_E  ;
+    "|lpm_rom:mem|altrom:srom|segment0_3" : LOCATION   = EC9_E  ;
+    "|lpm_rom:mem|altrom:srom|segment0_4" : LOCATION   = EC1_E  ;
+    "|lpm_rom:mem|altrom:srom|segment0_5" : LOCATION   = EC12_E ;
+    "|lpm_rom:mem|altrom:srom|segment0_6" : LOCATION   = EC2_E  ;
+    "|lpm_rom:mem|altrom:srom|segment0_7" : LOCATION   = EC10_E ;
+
+END;
+
+INTERNAL_INFO "memu"
+BEGIN
+	DEVICE = EP1K30TC144-1;
+    OH0R5P30 : LORAX = "1:G55R5,V4C35,G42R4|2:LRP0R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MRP11R4->EC11_E,->EC9_E,->EC12_E,->EC10_E|,2:LWP12R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MWP11R4->EC11_E,->EC9_E,->EC12_E,->EC10_E||";
+    OV0C32P141 : LORAX = "1:V1C32,G71R4|2:LRP20R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MRP19R4->EC11_E,->EC9_E,->EC12_E,->EC10_E|,2:LWP6R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MWP6R4->EC11_E,->EC9_E,->EC12_E,->EC10_E||";
+    OV0C25P132 : LORAX = "1:V1C25,G56R4|2:LRP19R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MRP1R4->EC11_E,->EC9_E,->EC12_E,->EC10_E|,2:LWP1R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MWP1R4->EC11_E,->EC9_E,->EC12_E,->EC10_E||";
+    OV0C7P117 : LORAX = "1:V1C7,HHL29R4|2:LRP10R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MRP7R4->EC11_E,->EC9_E,->EC12_E,->EC10_E|,2:LWP7R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MWP7R4->EC11_E,->EC9_E,->EC12_E,->EC10_E||";
+    OH1R2P12 : LORAX = "1:G68R2,V10C35,G3R4|2:LRP13R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MRP3R4->EC11_E,->EC9_E,->EC12_E,->EC10_E|,2:LWP3R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MWP3R4->EC11_E,->EC9_E,->EC12_E,->EC10_E||";
+    OH10R1P99 : LORAX = "1:G67R1,V11C28,G31R4|2:LRP5R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MRP12R4->EC11_E,->EC9_E,->EC12_E,->EC10_E|,2:LWP13R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MWP12R4->EC11_E,->EC9_E,->EC12_E,->EC10_E||";
+    OH2R4P27 : LORAX = "1:G58R4|2:LRP4R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MRP6R4->EC11_E,->EC9_E,->EC12_E,->EC10_E|,2:LWP4R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MWP0R4->EC11_E,->EC9_E,->EC12_E,->EC10_E||";
+    OH0R4P26 : LORAX = "1:G55R4|2:LRP2R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MRP0R4->EC11_E,->EC9_E,->EC12_E,->EC10_E|,2:LWP0R4->EC4_E,->EC3_E,->EC1_E,->EC2_E|,2:MWP2R4->EC11_E,->EC9_E,->EC12_E,->EC10_E||";
+    EC4_E   : LORAX = "1:RB3R4,RV32,G4R0,PA5R0C12->LC1_A13|";
+    EC11_E  : LORAX = "1:RB10R4,G5R4,PA7R4C22->LC3_E23|";
+    EC3_E   : LORAX = "1:RB2R4,RV44,G26R3,PA4R3C2->LC3_D3|";
+    EC9_E   : LORAX = "1:RB8R4,G37R4,PA4R4C16->LC4_E17|";
+    EC1_E   : LORAX = "1:RB0R4,G7R4,PA9R4C10->LC4_E11|";
+    EC12_E  : LORAX = "1:RB11R4,G41R4,PA10R4C1->LC2_E2|";
+    EC2_E   : LORAX = "1:RB1R4,G0R4,PA0R4C8->LC1_E9|";
+    EC10_E  : LORAX = "1:RB9R4,G125R4,PA5R4C18->LC2_E19|";
+    LC2_E19 : LORAX = "1:MSW1R4C19,V3C19->OV2C19P51|";
+    LC1_E9  : LORAX = "1:MSW0R4C8,V2C8->OV0C8P118|";
+    LC2_E2  : LORAX = "1:MSW2R4C0,V6C0->OV2C0P73|";
+    LC4_E11 : LORAX = "1:MSW3R4C10,HHL25R4->OH11R4P86|";
+    LC4_E17 : LORAX = "1:MSW3R4C17,V11C17->OV0C17P122|";
+    LC3_D3  : LORAX = "1:MSW2R3C2,HHL28R3->OH10R3P91|";
+    LC3_E23 : LORAX = "1:MSW2R4C23,V6C23,HHR21R2->OH2R2P13|";
+    LC1_A13 : LORAX = "1:MSW0R0C12,HHL30R0->OH8R0P102|";
+	LC2_E19 : LORAX2 = "X, X, X, EC10_E";
+	LC1_E9  : LORAX2 = "X, X, X, EC2_E";
+	LC2_E2  : LORAX2 = "X, X, X, EC12_E";
+	LC4_E11 : LORAX2 = "X, X, X, EC1_E";
+	LC4_E17 : LORAX2 = "X, X, X, EC9_E";
+	LC3_D3  : LORAX2 = "X, X, X, EC3_E";
+	LC3_E23 : LORAX2 = "X, X, X, EC11_E";
+	LC1_A13 : LORAX2 = "X, X, X, EC4_E";
+END;

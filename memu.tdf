@@ -1,0 +1,21 @@
+include "lpm_rom.inc";
+
+subdesign memu
+(
+	addr[0..7] : input;
+	data[0..7] : input;
+	we: input;
+	result[0..7] : output;
+)
+variable
+	mem: lpm_rom with (
+		LPM_WIDTH = 8, 
+		LPM_WIDTHAD = 8,
+		LPM_ADDRESS_CONTROL = UNREGISTERED,
+		LPM_OUTDATA = UNREGISTERED,
+ 		LPM_FILE = "commands.mif");
+begin
+	mem.address[] = addr[];
+	result[] = mem.q[];
+end;
+
