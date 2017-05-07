@@ -1,0 +1,15 @@
+subdesign acc
+(
+	in[7..0] : input;
+	clk : input;
+	out[7..0] : output;
+)
+variable 
+	d[7..0] : dff;
+begin
+	for i in 0 to 7 generate
+		d[i].clk = clk;
+		d[i].d = in[i];
+		out[i] = d[i].q;
+	end generate;
+end;

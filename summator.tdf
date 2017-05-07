@@ -1,0 +1,9 @@
+subdesign summator
+(
+	a, b, cin: input;
+	s, cout: output;
+)
+begin
+	s = (a xor b) xor cin;
+	cout = (a & b) # ((a xor b) & cin);
+end;

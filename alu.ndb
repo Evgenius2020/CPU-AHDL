@@ -1,0 +1,155 @@
+NDB006
+The number of symbol table entries is: 9
+The length of the symbol table is: 141
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|summator:sum7|
+>	|summator:sum6|
+N	|summator:sum5|
+^	|summator:sum4|
+n	|summator:sum3|
+~	|summator:sum2|
+"0	|summator:sum1|
+"@	|summator:sum0|
+
+The number of name info structs is : 135
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	13	13	:100	"X
+#	IeEA	!	13	13	:101	"Y
+$	IeEA	!	14	13	:102	"Z
+%	IeEA	!	14	13	:103	"[
+&	IeEA	!	16	9	:104	"\
+'	L8f/	!	16	9	1	q	:105	"]
+(	IeEA	!	18	14	:106	"^
+)	IeEA	!	18	14	:107	"_
+*	IeEA	!	19	14	:108	"`
++	IeEA	!	19	14	:109	"a
+,	IeEA	!	20	16	:110	"b
+-	L8f/	!	20	16	2	/	5	:111	"c
+.	IeEA	!	21	10	:112	"d
+/	L8f/	!	21	10	1	r	:113	"e
+0	IeEA	!	18	14	:114	"f
+1	IeEA	!	18	14	:115	"g
+2	IeEA	!	19	14	:116	"h
+3	IeEA	!	19	14	:117	"i
+4	IeEA	!	20	16	:118	"j
+5	L8f/	!	20	16	2	7	=	:119	"k
+6	IeEA	!	21	10	:120	"l
+7	L8f/	!	21	10	1	s	:121	"m
+8	IeEA	!	18	14	:122	"n
+9	IeEA	!	18	14	:123	"o
+:	IeEA	!	19	14	:124	"p
+;	IeEA	!	19	14	:125	"q
+<	IeEA	!	20	16	:126	"r
+=	L8f/	!	20	16	2	?	E	:127	"s
+>	IeEA	!	21	10	:128	"t
+?	L8f/	!	21	10	1	t	:129	"u
+@	IeEA	!	18	14	:130	"v
+A	IeEA	!	18	14	:131	"w
+B	IeEA	!	19	14	:132	"x
+C	IeEA	!	19	14	:133	"y
+D	IeEA	!	20	16	:134	"z
+E	L8f/	!	20	16	2	"8	G	:135	"{
+F	IeEA	!	21	10	:136	"|
+G	L8f/	!	21	10	1	u	:137	"}
+H	IeEA	!	18	14	:138	"~
+I	IeEA	!	18	14	:139	#!
+J	IeEA	!	19	14	:140	#"
+K	IeEA	!	19	14	:141	##
+L	IeEA	!	20	16	:142	#$
+M	IeEA	!	20	16	:143	#%
+N	IeEA	!	21	10	:144	#&
+O	L8f/	!	21	10	1	v	:145	#'
+P	IeEA	!	18	14	:146	#(
+Q	IeEA	!	18	14	:147	#)
+R	IeEA	!	19	14	:148	#*
+S	IeEA	!	19	14	:149	#+
+T	IeEA	!	20	16	:150	#,
+U	IeEA	!	20	16	:151	#-
+V	IeEA	!	21	10	:152	#.
+W	L8f/	!	21	10	1	w	:153	#/
+X	IeEA	!	18	14	:154	#0
+Y	IeEA	!	18	14	:155	#1
+Z	IeEA	!	19	14	:156	#2
+[	IeEA	!	19	14	:157	#3
+\	IeEA	!	20	16	:158	#4
+]	IeEA	!	20	16	:159	#5
+^	IeEA	!	21	10	:160	#6
+_	L8f/	!	21	10	1	x	:161	#7
+`	L8ef	!	5	3	2	'	-	a0	t
+a	L8ef	!	5	3	2	/	5	a1	s
+b	L8ef	!	5	3	2	7	=	a2	r
+c	L8ef	!	5	3	2	?	E	a3	q
+d	L8ef	!	5	3	2	"8	G	a4	p
+e	L8ef	!	5	3	2	">	O	a5	o
+f	L8ef	!	5	3	2	"D	W	a6	n
+g	L8ef	!	5	3	1	_	a7	m
+h	L8ef	!	5	12	2	'	-	b0	|
+i	L8ef	!	5	12	2	/	5	b1	{
+j	L8ef	!	5	12	2	7	=	b2	z
+k	L8ef	!	5	12	2	?	E	b3	y
+l	L8ef	!	5	12	2	"8	G	b4	x
+m	L8ef	!	5	12	2	">	O	b5	w
+n	L8ef	!	5	12	2	"D	W	b6	v
+o	L8ef	!	5	12	1	_	b7	u
+p	L8ef	!	5	20	12	'	-	/	5	7	=	?	E	G	O	W	_	cmd	}
+q	IeE[	!	16	5	q0	"'
+r	IeE[	!	21	6	q1	"&
+s	IeE[	!	21	6	q2	"%
+t	IeE[	!	21	6	q3	"$
+u	IeE[	!	21	6	q4	"#
+v	IeE[	!	21	6	q5	""
+w	IeE[	!	21	6	q6	"!
+x	IeE[	!	21	6	q7	~
+y	IeEA	"@	7	9	:32	$S
+z	IeEA	"@	7	16	:33	$T
+{	IeEA	"@	8	12	:34	$U
+|	IeEA	"@	8	23	:35	$V
+}	IeEA	"@	8	30	:36	$W
+~	IeEA	"@	8	17	:37	$X
+"!	IeEA	"0	7	9	:32	$D
+""	IeEA	"0	7	16	:33	$E
+"#	IeEA	"0	8	12	:34	$F
+"$	IeEA	"0	8	23	:35	$G
+"%	IeEA	"0	8	30	:36	$H
+"&	IeEA	"0	8	17	:37	$I
+"'	IeEA	~	7	9	:32	$5
+"(	IeEA	~	7	16	:33	$6
+")	IeEA	~	8	12	:34	$7
+"*	IeEA	~	8	23	:35	$8
+"+	IeEA	~	8	30	:36	$9
+",	IeEA	~	8	17	:37	$:
+"-	IeEA	n	7	9	:32	$&
+".	IeEA	n	7	16	:33	$'
+"/	IeEA	n	8	12	:34	$(
+"0	IeEA	n	8	23	:35	$)
+"1	IeEA	n	8	30	:36	$*
+"2	IeEA	n	8	17	:37	$+
+"3	IeEA	^	7	9	:32	#u
+"4	IeEA	^	7	16	:33	#v
+"5	IeEA	^	8	12	:34	#w
+"6	IeEA	^	8	23	:35	#x
+"7	IeEA	^	8	30	:36	#y
+"8	L8f/	^	8	17	2	">	O	:37	#z
+"9	IeEA	N	7	9	:32	#f
+":	IeEA	N	7	16	:33	#g
+";	IeEA	N	8	12	:34	#h
+"<	IeEA	N	8	23	:35	#i
+"=	IeEA	N	8	30	:36	#j
+">	L8f/	N	8	17	2	"D	W	:37	#k
+"?	IeEA	>	7	9	:32	#V
+"@	IeEA	>	7	16	:33	#W
+"A	IeEA	>	8	12	:34	#X
+"B	IeEA	>	8	23	:35	#Y
+"C	IeEA	>	8	30	:36	#Z
+"D	L8f/	>	8	17	1	_	:37	#[
+"E	IeEA	.	7	9	:32	#F
+"F	IeEA	.	7	16	:33	#G
+"G	IeEA	.	8	12	:34	#H
+"H	IeEA	.	8	23	:35	#I
+"I	IeEA	.	8	30	:36	#J
+"J	IeEA	.	8	17	:37	#K

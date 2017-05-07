@@ -1,0 +1,653 @@
+Project Information                           c:\maxplus2\projects\cpu\alu.rpt
+
+MAX+plus II Compiler Report File
+Version 9.6 3/22/2000
+Compiled: 04/23/2017 20:21:47
+
+Copyright (C) 1988-2000 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+Untitled
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input Output Bidir  Memory  Memory  			 LCs
+POF       Device          Pins  Pins   Pins   Bits % Utilized  LCs  % Utilized
+
+alu       EP1K30TC144-1    17     8      0    0         0  %    15       0  %
+
+User Pins:                 17     8      0  
+
+
+
+Project Information                           c:\maxplus2\projects\cpu\alu.rpt
+
+** PROJECT TIMING MESSAGES **
+
+Warning: Timing characteristics of device EP1K30TC144-1 are preliminary
+
+
+Project Information                           c:\maxplus2\projects\cpu\alu.rpt
+
+** FILE HIERARCHY **
+
+
+
+|summator:sum7|
+|summator:sum6|
+|summator:sum5|
+|summator:sum4|
+|summator:sum3|
+|summator:sum2|
+|summator:sum1|
+|summator:sum0|
+
+
+Device-Specific Information:                  c:\maxplus2\projects\cpu\alu.rpt
+alu
+
+***** Logic for device 'alu' compiled without errors.
+
+
+
+
+Device: EP1K30TC144-1
+
+ACEX 1K Configuration Scheme: Passive Serial
+
+Device Options:
+    User-Supplied Start-Up Clock               = OFF
+    Auto-Restart Configuration on Frame Error  = OFF
+    Release Clears Before Tri-States           = OFF
+    Enable Chip_Wide Reset                     = OFF
+    Enable Chip-Wide Output Enable             = OFF
+    Enable INIT_DONE Output                    = OFF
+    JTAG User Code                             = 7f
+    MultiVolt I/O                              = OFF
+    Enable Lock Output                         = OFF
+
+                                                                                         
+                                                                                         
+                R R R   R   R R   R   R   R R   R             R R R     R   R R R R   R  
+                E E E   E   E E   E   E   E E   E             E E E     E   E E E E   E  
+                S S S   S   S S   S   S   S S   S V           S S S     S   S S S S   S  
+                E E E   E   E E   E V E   E E   E C           E E E     E V E E E E   E  
+                R R R   R   R R   R C R   R R   R C           R R R     R C R R R R   R  
+                V V V   V G V V   V C V   V V G V I G G G G   V V V     V C V V V V   V  
+                E E E a E N E E b E I E a E E N E N N N N N q E E E q a E I E E E E b E  
+                D D D 1 D D D D 4 D O D 2 D D D D T D D D D 4 D D D 1 3 D O D D D D 1 D  
+              --------------------------------------------------------------------------_ 
+             / 144 142 140 138 136 134 132 130 128 126 124 122 120 118 116 114 112 110   |_ 
+            /    143 141 139 137 135 133 131 129 127 125 123 121 119 117 115 113 111 109    | 
+      #TCK |  1                                                                         108 | ^DATA0 
+^CONF_DONE |  2                                                                         107 | ^DCLK 
+     ^nCEO |  3                                                                         106 | ^nCE 
+      #TDO |  4                                                                         105 | #TDI 
+     VCCIO |  5                                                                         104 | GND 
+       GND |  6                                                                         103 | VCCINT 
+  RESERVED |  7                                                                         102 | q7 
+  RESERVED |  8                                                                         101 | RESERVED 
+  RESERVED |  9                                                                         100 | RESERVED 
+  RESERVED | 10                                                                          99 | a5 
+  RESERVED | 11                                                                          98 | RESERVED 
+        a4 | 12                                                                          97 | RESERVED 
+        q6 | 13                                                                          96 | RESERVED 
+  RESERVED | 14                                                                          95 | RESERVED 
+       GND | 15                                                                          94 | VCCIO 
+    VCCINT | 16                                                                          93 | GND 
+        b5 | 17                                                                          92 | b6 
+  RESERVED | 18                                                                          91 | q5 
+  RESERVED | 19                              EP1K30TC144-1                               90 | RESERVED 
+  RESERVED | 20                                                                          89 | RESERVED 
+  RESERVED | 21                                                                          88 | RESERVED 
+  RESERVED | 22                                                                          87 | RESERVED 
+        b7 | 23                                                                          86 | q3 
+     VCCIO | 24                                                                          85 | VCCINT 
+       GND | 25                                                                          84 | GND 
+        a7 | 26                                                                          83 | RESERVED 
+        a6 | 27                                                                          82 | RESERVED 
+  RESERVED | 28                                                                          81 | RESERVED 
+  RESERVED | 29                                                                          80 | RESERVED 
+        a0 | 30                                                                          79 | RESERVED 
+  RESERVED | 31                                                                          78 | RESERVED 
+  RESERVED | 32                                                                          77 | ^MSEL0 
+        b0 | 33                                                                          76 | ^MSEL1 
+      #TMS | 34                                                                          75 | VCCINT 
+  ^nSTATUS | 35                                                                          74 | ^nCONFIG 
+  RESERVED | 36                                                                          73 | q2 
+           |      38  40  42  44  46  48  50  52  54  56  58  60  62  64  66  68  70  72  _| 
+            \   37  39  41  43  45  47  49  51  53  55  57  59  61  63  65  67  69  71   | 
+             \--------------------------------------------------------------------------- 
+                R R R G R R R R V R b R R V q G V G G G G G c R V R R R R G R b R R V R  
+                E E E N E E E E C E 3 E E C 0 N C N N N N N m E C E E E E N E 2 E E C E  
+                S S S D S S S S C S   S S C   D C D D D D D d S C S S S S D S   S S C S  
+                E E E   E E E E I E   E E I     _       _     E I E E E E   E   E E I E  
+                R R R   R R R R O R   R R N     C       C     R O R R R R   R   R R O R  
+                V V V   V V V V   V   V V T     K       K     V   V V V V   V   V V   V  
+                E E E   E E E E   E   E E       L       L     E   E E E E   E   E E   E  
+                D D D   D D D D   D   D D       K       K     D   D D D D   D   D D   D  
+                                                                                         
+                                                                                         
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (2.5 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (2.5 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+^ = Dedicated configuration pin.
++ = Reserved configuration pin, which is tri-stated during user mode.
+* = Reserved configuration pin, which drives out in user mode.
+PDn = Power Down pin. 
+@ = Special-purpose pin. 
+# = JTAG Boundary-Scan Testing/In-System Programming or Configuration Pin. The JTAG inputs TMS and TDI should be tied to VCC and TCK should be tied to GND when not in use.
+& = JTAG pin used for I/O. When used as user I/O, JTAG pins must be kept stable before and during configuration.  JTAG pin stability prevents accidental loading of JTAG instructions.
+$ = Pin has PCI I/O option enabled. Pin is neither '5.0 V'- nor '3.3 V'-tolerant. 
+
+
+Device-Specific Information:                  c:\maxplus2\projects\cpu\alu.rpt
+alu
+
+** RESOURCE USAGE **
+
+Logic                Column       Row                                   
+Array                Interconnect Interconnect         Clears/     External  
+Block   Logic Cells  Driven       Driven       Clocks  Presets   Interconnect
+E1       1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       4/22( 18%)   
+E9       1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       4/22( 18%)   
+E18      8/ 8(100%)   3/ 8( 37%)   2/ 8( 25%)    0/2    0/2      12/22( 54%)   
+E20      5/ 8( 62%)   2/ 8( 25%)   3/ 8( 37%)    0/2    0/2      10/22( 45%)   
+
+
+Embedded             Column       Row                                   
+Array     Embedded   Interconnect Interconnect         Read/      External  
+Block     Cells      Driven       Driven       Clocks  Write    Interconnect
+
+
+Total dedicated input pins used:                 0/6      (  0%)
+Total I/O pins used:                            25/96     ( 26%)
+Total logic cells used:                         15/1728   (  0%)
+Total embedded cells used:                       0/96     (  0%)
+Total EABs used:                                 0/6      (  0%)
+Average fan-in:                                 3.66/4    ( 91%)
+Total fan-in:                                  55/6912    (  0%)
+
+Total input pins required:                      17
+Total input I/O cell registers required:         0
+Total output pins required:                      8
+Total output I/O cell registers required:        0
+Total buried I/O cell registers required:        0
+Total bidirectional pins required:               0
+Total reserved pins required                     0
+Total logic cells required:                     15
+Total flipflops required:                        0
+Total packed registers required:                 0
+Total logic cells in carry chains:               0
+Total number of carry chains:                    0
+Total logic cells in cascade chains:             0
+Total number of cascade chains:                  0
+Total single-pin Clock Enables required:         0
+Total single-pin Output Enables required:        0
+
+Synthesized logic cells:                         0/1728   (  0%)
+
+Logic Cell and Embedded Cell Counts
+
+Column:  01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17  18  EA  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  Total(LC/EC)
+ A:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+ B:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+ C:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+ D:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+ E:      1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   8   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0     15/0  
+ F:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+
+Total:   1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   8   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0     15/0  
+
+
+
+Device-Specific Information:                  c:\maxplus2\projects\cpu\alu.rpt
+alu
+
+** INPUTS **
+
+                                                    Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+  30      -     -    F    --      INPUT             ^    0    0    0    2  a0
+ 141      -     -    -    33      INPUT             ^    0    0    0    2  a1
+ 132      -     -    -    26      INPUT             ^    0    0    0    2  a2
+ 117      -     -    -    08      INPUT             ^    0    0    0    2  a3
+  12      -     -    C    --      INPUT             ^    0    0    0    2  a4
+  99      -     -    B    --      INPUT             ^    0    0    0    2  a5
+  27      -     -    E    --      INPUT             ^    0    0    0    2  a6
+  26      -     -    E    --      INPUT             ^    0    0    0    1  a7
+  33      -     -    F    --      INPUT             ^    0    0    0    2  b0
+ 110      -     -    -    02      INPUT             ^    0    0    0    2  b1
+  68      -     -    -    07      INPUT             ^    0    0    0    2  b2
+  47      -     -    -    25      INPUT             ^    0    0    0    2  b3
+ 136      -     -    -    30      INPUT             ^    0    0    0    2  b4
+  17      -     -    C    --      INPUT             ^    0    0    0    2  b5
+  92      -     -    D    --      INPUT             ^    0    0    0    2  b6
+  23      -     -    D    --      INPUT             ^    0    0    0    1  b7
+  59      -     -    -    16      INPUT             ^    0    0    0   12  cmd
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+^ = Increased input delay
+* = PCI I/O is enabled
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+
+
+Device-Specific Information:                  c:\maxplus2\projects\cpu\alu.rpt
+alu
+
+** OUTPUTS **
+
+       Fed By Fed By                                Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+  51      -     -    -    20     OUTPUT                 0    1    0    0  q0
+ 118      -     -    -    09     OUTPUT                 0    1    0    0  q1
+  73      -     -    -    01     OUTPUT                 0    1    0    0  q2
+  86      -     -    E    --     OUTPUT                 0    1    0    0  q3
+ 122      -     -    -    18     OUTPUT                 0    1    0    0  q4
+  91      -     -    D    --     OUTPUT                 0    1    0    0  q5
+  13      -     -    C    --     OUTPUT                 0    1    0    0  q6
+ 102      -     -    A    --     OUTPUT                 0    1    0    0  q7
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+^ = Increased input delay
+* = PCI I/O is enabled
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+
+
+Device-Specific Information:                  c:\maxplus2\projects\cpu\alu.rpt
+alu
+
+** BURIED LOGIC **
+
+                                                    Fan-In    Fan-Out
+ IOC     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+   -      6     -    E    18        OR2                2    1    0    2  |summator:sum4|:37
+   -      7     -    E    18        OR2                2    1    0    2  |summator:sum5|:37
+   -      8     -    E    18        OR2                2    1    0    1  |summator:sum6|:37
+   -      7     -    E    20        OR2                3    0    1    0  :105
+   -      8     -    E    20       AND2                3    0    0    2  :111
+   -      1     -    E    09        OR2                3    1    1    0  :113
+   -      2     -    E    20        OR2                3    1    0    2  :119
+   -      2     -    E    01        OR2                3    1    1    0  :121
+   -      6     -    E    20        OR2                3    1    0    2  :127
+   -      3     -    E    18        OR2                3    1    1    0  :129
+   -      5     -    E    18        OR2                3    1    0    2  :135
+   -      4     -    E    18        OR2                3    1    1    0  :137
+   -      3     -    E    20        OR2                3    1    1    0  :145
+   -      2     -    E    18        OR2                3    1    1    0  :153
+   -      1     -    E    18        OR2                3    1    1    0  :161
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+^ = Increased input delay
+* = PCI I/O is enabled
+p = Packed register
+
+
+Device-Specific Information:                  c:\maxplus2\projects\cpu\alu.rpt
+alu
+
+** FASTTRACK INTERCONNECT UTILIZATION **
+
+Row FastTrack Interconnect:
+
+          Global         Left Half-      Right Half-
+         FastTrack       FastTrack       FastTrack 
+Row     Interconnect    Interconnect    Interconnect    Input Pins     Output Pins     Bidir Pins
+A:       0/144(  0%)     1/ 72(  1%)     0/ 72(  0%)    0/16(  0%)      1/16(  6%)     0/16(  0%)
+B:       1/144(  0%)     0/ 72(  0%)     0/ 72(  0%)    1/16(  6%)      0/16(  0%)     0/16(  0%)
+C:       3/144(  2%)     0/ 72(  0%)     0/ 72(  0%)    2/16( 12%)      1/16(  6%)     0/16(  0%)
+D:       3/144(  2%)     0/ 72(  0%)     0/ 72(  0%)    2/16( 12%)      1/16(  6%)     0/16(  0%)
+E:      18/144( 12%)     3/ 72(  4%)     3/ 72(  4%)    2/16( 12%)      1/16(  6%)     0/16(  0%)
+F:       2/144(  1%)     0/ 72(  0%)     0/ 72(  0%)    2/16( 12%)      0/16(  0%)     0/16(  0%)
+
+
+Column FastTrack Interconnect:
+
+         FastTrack                                 
+Column  Interconnect    Input Pins     Output Pins     Bidir Pins
+01:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+02:      1/24(  4%)     1/4( 25%)      0/4(  0%)       0/4(  0%)
+03:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+04:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+05:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+06:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+07:      1/24(  4%)     1/4( 25%)      0/4(  0%)       0/4(  0%)
+08:      1/24(  4%)     1/4( 25%)      0/4(  0%)       0/4(  0%)
+09:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+10:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+11:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+12:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+13:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+14:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+15:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+16:      1/24(  4%)     1/4( 25%)      0/4(  0%)       0/4(  0%)
+17:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+18:      2/24(  8%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+19:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+20:      2/24(  8%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+21:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+22:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+23:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+24:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+25:      1/24(  4%)     1/4( 25%)      0/4(  0%)       0/4(  0%)
+26:      1/24(  4%)     1/4( 25%)      0/4(  0%)       0/4(  0%)
+27:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+28:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+29:      1/24(  4%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+30:      2/24(  8%)     1/4( 25%)      0/4(  0%)       0/4(  0%)
+31:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+32:      2/24(  8%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+33:      2/24(  8%)     1/4( 25%)      0/4(  0%)       0/4(  0%)
+34:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+35:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+36:      2/24(  8%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+EA:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+
+
+Device-Specific Information:                  c:\maxplus2\projects\cpu\alu.rpt
+alu
+
+** EQUATIONS **
+
+a0       : INPUT;
+a1       : INPUT;
+a2       : INPUT;
+a3       : INPUT;
+a4       : INPUT;
+a5       : INPUT;
+a6       : INPUT;
+a7       : INPUT;
+b0       : INPUT;
+b1       : INPUT;
+b2       : INPUT;
+b3       : INPUT;
+b4       : INPUT;
+b5       : INPUT;
+b6       : INPUT;
+b7       : INPUT;
+cmd      : INPUT;
+
+-- Node name is 'q0' from file "alu.tdf" line 16, column 5
+-- Equation name is 'q0', type is output 
+q0       =  _LC7_E20;
+
+-- Node name is 'q1' from file "alu.tdf" line 21, column 6
+-- Equation name is 'q1', type is output 
+q1       =  _LC1_E9;
+
+-- Node name is 'q2' from file "alu.tdf" line 21, column 6
+-- Equation name is 'q2', type is output 
+q2       =  _LC2_E1;
+
+-- Node name is 'q3' from file "alu.tdf" line 21, column 6
+-- Equation name is 'q3', type is output 
+q3       =  _LC3_E18;
+
+-- Node name is 'q4' from file "alu.tdf" line 21, column 6
+-- Equation name is 'q4', type is output 
+q4       =  _LC4_E18;
+
+-- Node name is 'q5' from file "alu.tdf" line 21, column 6
+-- Equation name is 'q5', type is output 
+q5       =  _LC3_E20;
+
+-- Node name is 'q6' from file "alu.tdf" line 21, column 6
+-- Equation name is 'q6', type is output 
+q6       =  _LC2_E18;
+
+-- Node name is 'q7' from file "alu.tdf" line 21, column 6
+-- Equation name is 'q7', type is output 
+q7       =  _LC1_E18;
+
+-- Node name is '|summator:sum4|:37' from file "summator.tdf" line 8, column 17
+-- Equation name is '_LC6_E18', type is buried 
+_LC6_E18 = LCELL( _EQ001);
+  _EQ001 =  a4 &  _LC5_E18
+         #  b4 &  _LC5_E18
+         #  a4 &  b4;
+
+-- Node name is '|summator:sum5|:37' from file "summator.tdf" line 8, column 17
+-- Equation name is '_LC7_E18', type is buried 
+_LC7_E18 = LCELL( _EQ002);
+  _EQ002 =  a5 &  _LC6_E18
+         #  b5 &  _LC6_E18
+         #  a5 &  b5;
+
+-- Node name is '|summator:sum6|:37' from file "summator.tdf" line 8, column 17
+-- Equation name is '_LC8_E18', type is buried 
+_LC8_E18 = LCELL( _EQ003);
+  _EQ003 =  a6 &  _LC7_E18
+         #  b6 &  _LC7_E18
+         #  a6 &  b6;
+
+-- Node name is ':105' from file "alu.tdf" line 16, column 9
+-- Equation name is '_LC7_E20', type is buried 
+_LC7_E20 = LCELL( _EQ004);
+  _EQ004 =  a0 & !b0 & !cmd
+         # !a0 &  b0 & !cmd;
+
+-- Node name is ':111' from file "alu.tdf" line 20, column 16
+-- Equation name is '_LC8_E20', type is buried 
+_LC8_E20 = LCELL( _EQ005);
+  _EQ005 =  a0 &  b0 & !cmd;
+
+-- Node name is ':113' from file "alu.tdf" line 21, column 10
+-- Equation name is '_LC1_E9', type is buried 
+_LC1_E9  = LCELL( _EQ006);
+  _EQ006 =  a1 &  b1 & !cmd &  _LC8_E20
+         # !a1 & !b1 & !cmd &  _LC8_E20
+         #  a1 & !b1 & !cmd & !_LC8_E20
+         # !a1 &  b1 & !cmd & !_LC8_E20;
+
+-- Node name is ':119' from file "alu.tdf" line 20, column 16
+-- Equation name is '_LC2_E20', type is buried 
+_LC2_E20 = LCELL( _EQ007);
+  _EQ007 =  a1 & !cmd &  _LC8_E20
+         #  b1 & !cmd &  _LC8_E20
+         #  a1 &  b1 & !cmd;
+
+-- Node name is ':121' from file "alu.tdf" line 21, column 10
+-- Equation name is '_LC2_E1', type is buried 
+_LC2_E1  = LCELL( _EQ008);
+  _EQ008 =  a2 &  b2 & !cmd &  _LC2_E20
+         # !a2 & !b2 & !cmd &  _LC2_E20
+         #  a2 & !b2 & !cmd & !_LC2_E20
+         # !a2 &  b2 & !cmd & !_LC2_E20;
+
+-- Node name is ':127' from file "alu.tdf" line 20, column 16
+-- Equation name is '_LC6_E20', type is buried 
+_LC6_E20 = LCELL( _EQ009);
+  _EQ009 =  a2 & !cmd &  _LC2_E20
+         #  b2 & !cmd &  _LC2_E20
+         #  a2 &  b2 & !cmd;
+
+-- Node name is ':129' from file "alu.tdf" line 21, column 10
+-- Equation name is '_LC3_E18', type is buried 
+_LC3_E18 = LCELL( _EQ010);
+  _EQ010 =  a3 &  b3 & !cmd &  _LC6_E20
+         # !a3 & !b3 & !cmd &  _LC6_E20
+         #  a3 & !b3 & !cmd & !_LC6_E20
+         # !a3 &  b3 & !cmd & !_LC6_E20;
+
+-- Node name is ':135' from file "alu.tdf" line 20, column 16
+-- Equation name is '_LC5_E18', type is buried 
+_LC5_E18 = LCELL( _EQ011);
+  _EQ011 =  a3 & !cmd &  _LC6_E20
+         #  b3 & !cmd &  _LC6_E20
+         #  a3 &  b3 & !cmd;
+
+-- Node name is ':137' from file "alu.tdf" line 21, column 10
+-- Equation name is '_LC4_E18', type is buried 
+_LC4_E18 = LCELL( _EQ012);
+  _EQ012 =  a4 &  b4 & !cmd &  _LC5_E18
+         # !a4 & !b4 & !cmd &  _LC5_E18
+         #  a4 & !b4 & !cmd & !_LC5_E18
+         # !a4 &  b4 & !cmd & !_LC5_E18;
+
+-- Node name is ':145' from file "alu.tdf" line 21, column 10
+-- Equation name is '_LC3_E20', type is buried 
+_LC3_E20 = LCELL( _EQ013);
+  _EQ013 =  a5 &  b5 & !cmd &  _LC6_E18
+         # !a5 & !b5 & !cmd &  _LC6_E18
+         #  a5 & !b5 & !cmd & !_LC6_E18
+         # !a5 &  b5 & !cmd & !_LC6_E18;
+
+-- Node name is ':153' from file "alu.tdf" line 21, column 10
+-- Equation name is '_LC2_E18', type is buried 
+_LC2_E18 = LCELL( _EQ014);
+  _EQ014 =  a6 &  b6 & !cmd &  _LC7_E18
+         # !a6 & !b6 & !cmd &  _LC7_E18
+         #  a6 & !b6 & !cmd & !_LC7_E18
+         # !a6 &  b6 & !cmd & !_LC7_E18;
+
+-- Node name is ':161' from file "alu.tdf" line 21, column 10
+-- Equation name is '_LC1_E18', type is buried 
+_LC1_E18 = LCELL( _EQ015);
+  _EQ015 =  a7 &  b7 & !cmd &  _LC8_E18
+         # !a7 & !b7 & !cmd &  _LC8_E18
+         #  a7 & !b7 & !cmd & !_LC8_E18
+         # !a7 &  b7 & !cmd & !_LC8_E18;
+
+
+
+Project Information                           c:\maxplus2\projects\cpu\alu.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Multi-Level
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'ACEX1K' family
+
+      CARRY_CHAIN                         = ignore
+      CARRY_CHAIN_LENGTH                  = 32
+      CASCADE_CHAIN                       = ignore
+      CASCADE_CHAIN_LENGTH                = 2
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SUBFACTOR_EXTRACTION                = on
+      IGNORE_SOFT_BUFFERS                 = on
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Use Quartus Fitter                        = on
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:01
+   --------------------------             --------
+   Total Time                             00:00:01
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 23,689K
