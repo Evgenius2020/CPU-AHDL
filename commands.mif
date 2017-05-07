@@ -4,8 +4,8 @@ ADDRESS_RADIX = DEC;
 DATA_RADIX = DEC;
 
 CONTENT BEGIN
-    0  :  3;
-    8  :  6;
+    0  :  0;
+    8  :  96;
     16 :  9;
     24 :  12;
 END;

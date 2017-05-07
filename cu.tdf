@@ -1,0 +1,50 @@
+include "acc.inc";
+include "alu.inc";
+include "ip.inc";
+include "ir.inc";
+include "memu.inc";
+
+subdesign cu
+(
+	clk: input;
+	acco[0..7]: output;
+	memuo[0..7]: output;
+	cmdo[0..2]: output;
+	argo[0..4]: output;
+)
+variable
+	cmd[0..2]: node;
+	arg[0..4]: node;
+	acci: acc;
+	iri: ir;
+	ipi: ip;
+	memui: memu;
+begin
+	acci.clk = clk;
+	acci.e = gnd;
+	acci.in[] = (0, arg[]);
+
+	ipi.clk = clk;
+	ipi.we = gnd;
+	ipi.newValue[] = (0, arg[]);
+
+	iri.in[] =  memui.result[];
+	arg[]= iri.arg[];
+	cmd[] = iri.cmd[];
+	
+	memui.we = gnd;
+	memui.addr[] = ipi.addr[];
+	memui.data[] = (0, arg[]);
+
+	CASE cmd[] IS
+		WHEN 3 => --jmp
+			ipi.we = vcc;	
+			ipi.newValue[] = (0, arg[]);
+	END CASE;
+	
+
+	acco[] = acci.out[];
+	memuo[] = memui.result[];
+	argo[] = arg[];
+	cmdo[] = cmd;
+end;

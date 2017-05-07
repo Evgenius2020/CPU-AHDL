@@ -1,0 +1,873 @@
+Project Information                            c:\maxplus2\projects\cpu\cu.rpt
+
+MAX+plus II Compiler Report File
+Version 9.6 3/22/2000
+Compiled: 05/07/2017 21:22:17
+
+Copyright (C) 1988-2000 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+Untitled
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input Output Bidir  Memory  Memory  			 LCs
+POF       Device          Pins  Pins   Pins   Bits % Utilized  LCs  % Utilized
+
+cu        EP1K30TC144-1    1      24     0    2048      8  %    26       1  %
+
+User Pins:                 1      24     0  
+
+
+
+Project Information                            c:\maxplus2\projects\cpu\cu.rpt
+
+** PROJECT COMPILATION MESSAGES **
+
+Warning: Line 10, File c:\maxplus2\projects\cpu\cu.tdf:
+   Group MSB will be "acco0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 11, File c:\maxplus2\projects\cpu\cu.tdf:
+   Group MSB will be "memuo0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 12, File c:\maxplus2\projects\cpu\cu.tdf:
+   Group MSB will be "cmdo0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 13, File c:\maxplus2\projects\cpu\cu.tdf:
+   Group MSB will be "argo0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 16, File c:\maxplus2\projects\cpu\cu.tdf:
+   Group MSB will be "cmd0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 17, File c:\maxplus2\projects\cpu\cu.tdf:
+   Group MSB will be "arg0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 25, File c:\maxplus2\projects\cpu\ir.inc:
+   Group MSB will be "in0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 26, File c:\maxplus2\projects\cpu\ir.inc:
+   Group MSB will be "arg0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 26, File c:\maxplus2\projects\cpu\ir.inc:
+   Group MSB will be "cmd0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 25, File c:\maxplus2\projects\cpu\ip.inc:
+   Group MSB will be "newvalue0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 26, File c:\maxplus2\projects\cpu\ip.inc:
+   Group MSB will be "addr0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 25, File c:\maxplus2\projects\cpu\memu.inc:
+   Group MSB will be "data0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 25, File c:\maxplus2\projects\cpu\memu.inc:
+   Group MSB will be "addr0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 26, File c:\maxplus2\projects\cpu\memu.inc:
+   Group MSB will be "result0", overrides default order of bits or BIT0=LSB in Options Statement
+Warning: Line 49, File c:\maxplus2\projects\cpu\cu.tdf:
+   Group "cmd" is missing brackets []
+Warning: Flipflop '|acc:acci|d7' stuck at GND
+Warning: Flipflop '|acc:acci|d6' stuck at GND
+Warning: Flipflop '|acc:acci|d5' stuck at GND
+Warning: Flipflop '|acc:acci|d4' stuck at GND
+Warning: Flipflop '|acc:acci|d3' stuck at GND
+Warning: Flipflop '|acc:acci|d2' stuck at GND
+Warning: Flipflop '|acc:acci|d1' stuck at GND
+Warning: Flipflop '|acc:acci|d0' stuck at GND
+
+
+** PROJECT TIMING MESSAGES **
+
+Warning: Timing characteristics of device EP1K30TC144-1 are preliminary
+
+
+Project Information                            c:\maxplus2\projects\cpu\cu.rpt
+
+** EMBEDDED ARRAYS **
+
+
+|memu:memui|lpm_rom:mem|altrom:srom|content: MEMORY (
+               width        =    8;
+               depth        =  256;
+               segmentsize  =  256;
+               mode         = MEM_READONLY#MEM_INITIALIZED;
+               file         = "commands.mif";
+         )
+         OF SEGMENTS (
+               |memu:memui|lpm_rom:mem|altrom:srom|segment0_7,
+               |memu:memui|lpm_rom:mem|altrom:srom|segment0_6,
+               |memu:memui|lpm_rom:mem|altrom:srom|segment0_5,
+               |memu:memui|lpm_rom:mem|altrom:srom|segment0_4,
+               |memu:memui|lpm_rom:mem|altrom:srom|segment0_3,
+               |memu:memui|lpm_rom:mem|altrom:srom|segment0_2,
+               |memu:memui|lpm_rom:mem|altrom:srom|segment0_1,
+               |memu:memui|lpm_rom:mem|altrom:srom|segment0_0
+);
+
+
+
+
+Project Information                            c:\maxplus2\projects\cpu\cu.rpt
+
+** FILE HIERARCHY **
+
+
+
+|acc:acci|
+|ir:iri|
+|ip:ipi|
+|memu:memui|
+|memu:memui|lpm_rom:mem|
+|memu:memui|lpm_rom:mem|altrom:srom|
+
+
+Device-Specific Information:                   c:\maxplus2\projects\cpu\cu.rpt
+cu
+
+***** Logic for device 'cu' compiled without errors.
+
+
+
+
+Device: EP1K30TC144-1
+
+ACEX 1K Configuration Scheme: Passive Serial
+
+Device Options:
+    User-Supplied Start-Up Clock               = OFF
+    Auto-Restart Configuration on Frame Error  = OFF
+    Release Clears Before Tri-States           = OFF
+    Enable Chip_Wide Reset                     = OFF
+    Enable Chip-Wide Output Enable             = OFF
+    Enable INIT_DONE Output                    = OFF
+    JTAG User Code                             = 7f
+    MultiVolt I/O                              = OFF
+    Enable Lock Output                         = OFF
+
+                                                                                         
+                                                                                         
+                R R R   R   R R   R   R   R R   R             R R R     R   R R R R   R  
+                E E E   E   E E   E   E   E E   E             E E E     E   E E E E   E  
+                S S S   S   S S m S   S   S S   S V           S S S     S   S S S S m S  
+                E E E a E   E E e E V E a E E   E C         a E E E a a E V E E E E e E  
+                R R R r R   R R m R C R r R R   R C         c R R R c r R C R R R R m R  
+                V V V g V G V V u V C V g V V G V I G G G G c V V V c g V C V V V V u V  
+                E E E o E N E E o E I E o E E N E N N N N N o E E E o o E I E E E E o E  
+                D D D 1 D D D D 4 D O D 2 D D D D T D D D D 4 D D D 1 3 D O D D D D 1 D  
+              --------------------------------------------------------------------------_ 
+             / 144 142 140 138 136 134 132 130 128 126 124 122 120 118 116 114 112 110   |_ 
+            /    143 141 139 137 135 133 131 129 127 125 123 121 119 117 115 113 111 109    | 
+      #TCK |  1                                                                         108 | ^DATA0 
+^CONF_DONE |  2                                                                         107 | ^DCLK 
+     ^nCEO |  3                                                                         106 | ^nCE 
+      #TDO |  4                                                                         105 | #TDI 
+     VCCIO |  5                                                                         104 | GND 
+       GND |  6                                                                         103 | VCCINT 
+  RESERVED |  7                                                                         102 | acco7 
+  RESERVED |  8                                                                         101 | RESERVED 
+  RESERVED |  9                                                                         100 | RESERVED 
+  RESERVED | 10                                                                          99 | cmdo0 
+  RESERVED | 11                                                                          98 | RESERVED 
+     argo4 | 12                                                                          97 | RESERVED 
+     acco6 | 13                                                                          96 | RESERVED 
+  RESERVED | 14                                                                          95 | RESERVED 
+       GND | 15                                                                          94 | VCCIO 
+    VCCINT | 16                                                                          93 | GND 
+    memuo5 | 17                                                                          92 | memuo6 
+  RESERVED | 18                                                                          91 | acco5 
+  RESERVED | 19                              EP1K30TC144-1                               90 | RESERVED 
+  RESERVED | 20                                                                          89 | RESERVED 
+  RESERVED | 21                                                                          88 | RESERVED 
+  RESERVED | 22                                                                          87 | RESERVED 
+    memuo7 | 23                                                                          86 | acco3 
+     VCCIO | 24                                                                          85 | VCCINT 
+       GND | 25                                                                          84 | GND 
+     cmdo2 | 26                                                                          83 | RESERVED 
+     cmdo1 | 27                                                                          82 | RESERVED 
+  RESERVED | 28                                                                          81 | RESERVED 
+  RESERVED | 29                                                                          80 | RESERVED 
+     argo0 | 30                                                                          79 | RESERVED 
+  RESERVED | 31                                                                          78 | RESERVED 
+  RESERVED | 32                                                                          77 | ^MSEL0 
+    memuo0 | 33                                                                          76 | ^MSEL1 
+      #TMS | 34                                                                          75 | VCCINT 
+  ^nSTATUS | 35                                                                          74 | ^nCONFIG 
+  RESERVED | 36                                                                          73 | acco2 
+           |      38  40  42  44  46  48  50  52  54  56  58  60  62  64  66  68  70  72  _| 
+            \   37  39  41  43  45  47  49  51  53  55  57  59  61  63  65  67  69  71   | 
+             \--------------------------------------------------------------------------- 
+                R R R G R R R R V R m R R V a G V G c G G G R R V R R R R G R m R R V R  
+                E E E N E E E E C E e E E C c N C N l N N N E E C E E E E N E e E E C E  
+                S S S D S S S S C S m S S C c D C D k D D D S S C S S S S D S m S S C S  
+                E E E   E E E E I E u E E I o   _       _   E E I E E E E   E u E E I E  
+                R R R   R R R R O R o R R N 0   C       C   R R O R R R R   R o R R O R  
+                V V V   V V V V   V 3 V V T     K       K   V V   V V V V   V 2 V V   V  
+                E E E   E E E E   E   E E       L       L   E E   E E E E   E   E E   E  
+                D D D   D D D D   D   D D       K       K   D D   D D D D   D   D D   D  
+                                                                                         
+                                                                                         
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (2.5 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (2.5 volts).
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+^ = Dedicated configuration pin.
++ = Reserved configuration pin, which is tri-stated during user mode.
+* = Reserved configuration pin, which drives out in user mode.
+PDn = Power Down pin. 
+@ = Special-purpose pin. 
+# = JTAG Boundary-Scan Testing/In-System Programming or Configuration Pin. The JTAG inputs TMS and TDI should be tied to VCC and TCK should be tied to GND when not in use.
+& = JTAG pin used for I/O. When used as user I/O, JTAG pins must be kept stable before and during configuration.  JTAG pin stability prevents accidental loading of JTAG instructions.
+$ = Pin has PCI I/O option enabled. Pin is neither '5.0 V'- nor '3.3 V'-tolerant. 
+
+
+Device-Specific Information:                   c:\maxplus2\projects\cpu\cu.rpt
+cu
+
+** RESOURCE USAGE **
+
+Logic                Column       Row                                   
+Array                Interconnect Interconnect         Clears/     External  
+Block   Logic Cells  Driven       Driven       Clocks  Presets   Interconnect
+B2       7/ 8( 87%)   4/ 8( 50%)   3/ 8( 37%)    1/2    0/2       5/22( 22%)   
+B7       2/ 8( 25%)   2/ 8( 25%)   0/ 8(  0%)    0/2    0/2       1/22(  4%)   
+B8       1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       1/22(  4%)   
+B10      2/ 8( 25%)   1/ 8( 12%)   1/ 8( 12%)    0/2    0/2       1/22(  4%)   
+B20      3/ 8( 37%)   2/ 8( 25%)   1/ 8( 12%)    1/2    0/2       2/22(  9%)   
+B25      8/ 8(100%)   2/ 8( 25%)   5/ 8( 62%)    1/2    0/2       3/22( 13%)   
+B26      1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       1/22(  4%)   
+B30      1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       1/22(  4%)   
+B33      1/ 8( 12%)   1/ 8( 12%)   0/ 8(  0%)    0/2    0/2       1/22(  4%)   
+
+
+Embedded             Column       Row                                   
+Array     Embedded   Interconnect Interconnect         Read/      External  
+Block     Cells      Driven       Driven       Clocks  Write    Interconnect
+B37      8/16( 50%)   0/16(  0%)   8/16( 50%)    0/2    2/6       8/88(  9%)   
+
+
+Total dedicated input pins used:                 1/6      ( 16%)
+Total I/O pins used:                            24/96     ( 25%)
+Total logic cells used:                         26/1728   (  1%)
+Total embedded cells used:                       8/96     (  8%)
+Total EABs used:                                 1/6      ( 16%)
+Average fan-in:                                 1.88/4    ( 47%)
+Total fan-in:                                  49/6912    (  0%)
+
+Total input pins required:                       1
+Total input I/O cell registers required:         0
+Total output pins required:                     24
+Total output I/O cell registers required:        0
+Total buried I/O cell registers required:        0
+Total bidirectional pins required:               0
+Total reserved pins required                     0
+Total logic cells required:                     26
+Total flipflops required:                        8
+Total packed registers required:                 0
+Total logic cells in carry chains:               0
+Total number of carry chains:                    0
+Total logic cells in cascade chains:             0
+Total number of cascade chains:                  0
+Total single-pin Clock Enables required:         0
+Total single-pin Output Enables required:        0
+Logic cells inserted for fitting:                8
+
+Synthesized logic cells:                        16/1728   (  0%)
+
+Logic Cell and Embedded Cell Counts
+
+Column:  01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17  18  EA  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  Total(LC/EC)
+ A:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+ B:      0   7   0   0   0   0   2   1   0   2   0   0   0   0   0   0   0   0   8   0   3   0   0   0   0   8   1   0   0   0   1   0   0   1   0   0   0     26/8  
+ C:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+ D:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+ E:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+ F:      0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0      0/0  
+
+Total:   0   7   0   0   0   0   2   1   0   2   0   0   0   0   0   0   0   0   8   0   3   0   0   0   0   8   1   0   0   0   1   0   0   1   0   0   0     26/8  
+
+
+
+Device-Specific Information:                   c:\maxplus2\projects\cpu\cu.rpt
+cu
+
+** INPUTS **
+
+                                                    Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+  55      -     -    -    --      INPUT  G          ^    0    0    0    0  clk
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+^ = Increased input delay
+* = PCI I/O is enabled
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+G = Global Source. Fan-out destinations counted here do not include destinations
+that are driven using global routing resources. Refer to the Auto Global Signals,
+Clock Signals, Clear Signals, Synchronous Load Signals, and Synchronous Clear Signals
+Sections of this Report File for information on which signals' fan-outs are used as
+Clock, Clear, Preset, Output Enable, and synchronous Load signals.
+
+
+Device-Specific Information:                   c:\maxplus2\projects\cpu\cu.rpt
+cu
+
+** OUTPUTS **
+
+       Fed By Fed By                                Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+  51      -     -    -    20     OUTPUT                 0    0    0    0  acco0
+ 118      -     -    -    09     OUTPUT                 0    0    0    0  acco1
+  73      -     -    -    01     OUTPUT                 0    0    0    0  acco2
+  86      -     -    E    --     OUTPUT                 0    0    0    0  acco3
+ 122      -     -    -    18     OUTPUT                 0    0    0    0  acco4
+  91      -     -    D    --     OUTPUT                 0    0    0    0  acco5
+  13      -     -    C    --     OUTPUT                 0    0    0    0  acco6
+ 102      -     -    A    --     OUTPUT                 0    0    0    0  acco7
+  30      -     -    F    --     OUTPUT                 0    1    0    0  argo0
+ 141      -     -    -    33     OUTPUT                 0    1    0    0  argo1
+ 132      -     -    -    26     OUTPUT                 0    1    0    0  argo2
+ 117      -     -    -    08     OUTPUT                 0    1    0    0  argo3
+  12      -     -    C    --     OUTPUT                 0    1    0    0  argo4
+  99      -     -    B    --     OUTPUT                 0    1    0    0  cmdo0
+  27      -     -    E    --     OUTPUT                 0    1    0    0  cmdo1
+  26      -     -    E    --     OUTPUT                 0    1    0    0  cmdo2
+  33      -     -    F    --     OUTPUT                 0    1    0    0  memuo0
+ 110      -     -    -    02     OUTPUT                 0    1    0    0  memuo1
+  68      -     -    -    07     OUTPUT                 0    1    0    0  memuo2
+  47      -     -    -    25     OUTPUT                 0    1    0    0  memuo3
+ 136      -     -    -    30     OUTPUT                 0    1    0    0  memuo4
+  17      -     -    C    --     OUTPUT                 0    1    0    0  memuo5
+  92      -     -    D    --     OUTPUT                 0    1    0    0  memuo6
+  23      -     -    D    --     OUTPUT                 0    1    0    0  memuo7
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+^ = Increased input delay
+* = PCI I/O is enabled
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+
+
+Device-Specific Information:                   c:\maxplus2\projects\cpu\cu.rpt
+cu
+
+** BURIED LOGIC **
+
+                                                    Fan-In    Fan-Out
+ IOC     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+   -      1     -    B    25       SOFT    s    r      0    1    1    0  argo0~fit~in1
+   -      1     -    B    33       SOFT    s    r      0    1    1    0  argo1~fit~in1
+   -      2     -    B    26       SOFT    s    r      0    1    1    0  argo2~fit~in1
+   -      4     -    B    07       SOFT    s    r      0    1    1    0  argo3~fit~in1
+   -      2     -    B    20       SOFT    s    r      0    1    1    0  argo4~fit~in1
+   -      2     -    B    10       SOFT    s    r      0    1    1    0  cmdo0~fit~in1
+   -      3     -    B    02       SOFT    s    r      0    1    1    0  cmdo1~fit~in1
+   -      1     -    B    02       SOFT    s    r      0    1    1    0  cmdo2~fit~in1
+   -      1     -    B    20       DFFE   +            0    2    0    8  |ip:ipi|curr0
+   -      8     -    B    02       DFFE   +            0    2    0    8  |ip:ipi|curr1
+   -      7     -    B    02       DFFE   +            0    2    0    8  |ip:ipi|curr2
+   -      4     -    B    25       DFFE   +            0    2    0   11  |ip:ipi|curr3
+   -      8     -    B    25       DFFE   +            0    3    0   10  |ip:ipi|curr4
+   -      3     -    B    25       DFFE   +            0    3    0    9  |ip:ipi|curr5
+   -      5     -    B    25       DFFE   +            0    2    0    9  |ip:ipi|curr6
+   -      6     -    B    25       DFFE   +            0    3    0    8  |ip:ipi|curr7
+   -      2     -    B    25       AND2                0    3    0    2  |ip:ipi|:77
+   -      -     8    B    --   MEM_SGMT                0    8    0    3  |memu:memui|lpm_rom:mem|altrom:srom|segment0_0
+   -      -    15    B    --   MEM_SGMT                0    8    0    3  |memu:memui|lpm_rom:mem|altrom:srom|segment0_1
+   -      -     4    B    --   MEM_SGMT                0    8    0    3  |memu:memui|lpm_rom:mem|altrom:srom|segment0_2
+   -      -     9    B    --   MEM_SGMT                0    8    0    3  |memu:memui|lpm_rom:mem|altrom:srom|segment0_3
+   -      -     3    B    --   MEM_SGMT                0    8    0    3  |memu:memui|lpm_rom:mem|altrom:srom|segment0_4
+   -      -    10    B    --   MEM_SGMT                0    8    0    3  |memu:memui|lpm_rom:mem|altrom:srom|segment0_5
+   -      -     2    B    --   MEM_SGMT                0    8    0    3  |memu:memui|lpm_rom:mem|altrom:srom|segment0_6
+   -      -    14    B    --   MEM_SGMT                0    8    0    3  |memu:memui|lpm_rom:mem|altrom:srom|segment0_7
+   -      6     -    B    10      LCELL    s           0    1    1    0  memuo0~1
+   -      4     -    B    02      LCELL    s           0    1    1    0  memuo1~1
+   -      2     -    B    08      LCELL    s           0    1    1    0  memuo2~1
+   -      7     -    B    25      LCELL    s           0    1    1    0  memuo3~1
+   -      2     -    B    30      LCELL    s           0    1    1    0  memuo4~1
+   -      5     -    B    02      LCELL    s           0    1    1    0  memuo5~1
+   -      1     -    B    07      LCELL    s           0    1    1    0  memuo6~1
+   -      7     -    B    20      LCELL    s           0    1    1    0  memuo7~1
+   -      6     -    B    02        OR2                0    3    0    8  :144
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+^ = Increased input delay
+* = PCI I/O is enabled
+p = Packed register
+
+
+Device-Specific Information:                   c:\maxplus2\projects\cpu\cu.rpt
+cu
+
+** FASTTRACK INTERCONNECT UTILIZATION **
+
+Row FastTrack Interconnect:
+
+          Global         Left Half-      Right Half-
+         FastTrack       FastTrack       FastTrack 
+Row     Interconnect    Interconnect    Interconnect    Input Pins     Output Pins     Bidir Pins
+A:       0/144(  0%)     0/ 72(  0%)     0/ 72(  0%)    0/16(  0%)      1/16(  6%)     0/16(  0%)
+B:      25/144( 17%)     2/ 72(  2%)     0/ 72(  0%)    0/16(  0%)      1/16(  6%)     0/16(  0%)
+C:       1/144(  0%)     0/ 72(  0%)     1/ 72(  1%)    0/16(  0%)      3/16( 18%)     0/16(  0%)
+D:       0/144(  0%)     1/ 72(  1%)     1/ 72(  1%)    0/16(  0%)      3/16( 18%)     0/16(  0%)
+E:       2/144(  1%)     0/ 72(  0%)     0/ 72(  0%)    0/16(  0%)      3/16( 18%)     0/16(  0%)
+F:       1/144(  0%)     0/ 72(  0%)     1/ 72(  1%)    0/16(  0%)      2/16( 12%)     0/16(  0%)
+
+
+Column FastTrack Interconnect:
+
+         FastTrack                                 
+Column  Interconnect    Input Pins     Output Pins     Bidir Pins
+01:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+02:      3/24( 12%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+03:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+04:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+05:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+06:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+07:      2/24(  8%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+08:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+09:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+10:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+11:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+12:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+13:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+14:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+15:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+16:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+17:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+18:      0/24(  0%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+19:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+20:      2/24(  8%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+21:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+22:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+23:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+24:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+25:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+26:      2/24(  8%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+27:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+28:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+29:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+30:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+31:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+32:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+33:      1/24(  4%)     0/4(  0%)      1/4( 25%)       0/4(  0%)
+34:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+35:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+36:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+EA:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+
+
+Device-Specific Information:                   c:\maxplus2\projects\cpu\cu.rpt
+cu
+
+** CLOCK SIGNALS **
+
+Type     Fan-out       Name
+INPUT        8         clk
+
+
+Device-Specific Information:                   c:\maxplus2\projects\cpu\cu.rpt
+cu
+
+** EQUATIONS **
+
+clk      : INPUT;
+
+-- Node name is 'acco0' from file "cu.tdf" line 46, column 6
+-- Equation name is 'acco0', type is output 
+acco0    =  GND;
+
+-- Node name is 'acco1' from file "cu.tdf" line 46, column 6
+-- Equation name is 'acco1', type is output 
+acco1    =  GND;
+
+-- Node name is 'acco2' from file "cu.tdf" line 46, column 6
+-- Equation name is 'acco2', type is output 
+acco2    =  GND;
+
+-- Node name is 'acco3' from file "cu.tdf" line 46, column 6
+-- Equation name is 'acco3', type is output 
+acco3    =  GND;
+
+-- Node name is 'acco4' from file "cu.tdf" line 46, column 6
+-- Equation name is 'acco4', type is output 
+acco4    =  GND;
+
+-- Node name is 'acco5' from file "cu.tdf" line 46, column 6
+-- Equation name is 'acco5', type is output 
+acco5    =  GND;
+
+-- Node name is 'acco6' from file "cu.tdf" line 46, column 6
+-- Equation name is 'acco6', type is output 
+acco6    =  GND;
+
+-- Node name is 'acco7' from file "cu.tdf" line 46, column 6
+-- Equation name is 'acco7', type is output 
+acco7    =  GND;
+
+-- Node name is 'argo0~fit~in1' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo0~fit~in1', location is LC1_B25, type is buried.
+-- synthesized logic cell 
+_LC1_B25 = LCELL( _EC3_B);
+
+-- Node name is 'argo0' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo0', type is output 
+argo0    =  _LC1_B25;
+
+-- Node name is 'argo1~fit~in1' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo1~fit~in1', location is LC1_B33, type is buried.
+-- synthesized logic cell 
+_LC1_B33 = LCELL( _EC9_B);
+
+-- Node name is 'argo1' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo1', type is output 
+argo1    =  _LC1_B33;
+
+-- Node name is 'argo2~fit~in1' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo2~fit~in1', location is LC2_B26, type is buried.
+-- synthesized logic cell 
+_LC2_B26 = LCELL( _EC4_B);
+
+-- Node name is 'argo2' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo2', type is output 
+argo2    =  _LC2_B26;
+
+-- Node name is 'argo3~fit~in1' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo3~fit~in1', location is LC4_B7, type is buried.
+-- synthesized logic cell 
+_LC4_B7  = LCELL( _EC15_B);
+
+-- Node name is 'argo3' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo3', type is output 
+argo3    =  _LC4_B7;
+
+-- Node name is 'argo4~fit~in1' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo4~fit~in1', location is LC2_B20, type is buried.
+-- synthesized logic cell 
+_LC2_B20 = LCELL( _EC8_B);
+
+-- Node name is 'argo4' from file "cu.tdf" line 48, column 6
+-- Equation name is 'argo4', type is output 
+argo4    =  _LC2_B20;
+
+-- Node name is 'cmdo0~fit~in1' from file "cu.tdf" line 49, column 6
+-- Equation name is 'cmdo0~fit~in1', location is LC2_B10, type is buried.
+-- synthesized logic cell 
+_LC2_B10 = LCELL( _EC14_B);
+
+-- Node name is 'cmdo0' from file "cu.tdf" line 49, column 6
+-- Equation name is 'cmdo0', type is output 
+cmdo0    =  _LC2_B10;
+
+-- Node name is 'cmdo1~fit~in1' from file "cu.tdf" line 49, column 6
+-- Equation name is 'cmdo1~fit~in1', location is LC3_B2, type is buried.
+-- synthesized logic cell 
+_LC3_B2  = LCELL( _EC2_B);
+
+-- Node name is 'cmdo1' from file "cu.tdf" line 49, column 6
+-- Equation name is 'cmdo1', type is output 
+cmdo1    =  _LC3_B2;
+
+-- Node name is 'cmdo2~fit~in1' from file "cu.tdf" line 49, column 6
+-- Equation name is 'cmdo2~fit~in1', location is LC1_B2, type is buried.
+-- synthesized logic cell 
+_LC1_B2  = LCELL( _EC10_B);
+
+-- Node name is 'cmdo2' from file "cu.tdf" line 49, column 6
+-- Equation name is 'cmdo2', type is output 
+cmdo2    =  _LC1_B2;
+
+-- Node name is 'memuo0~1' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo0~1', location is LC6_B10, type is buried.
+-- synthesized logic cell 
+_LC6_B10 = LCELL( _EC14_B);
+
+-- Node name is 'memuo0' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo0', type is output 
+memuo0   =  _LC6_B10;
+
+-- Node name is 'memuo1~1' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo1~1', location is LC4_B2, type is buried.
+-- synthesized logic cell 
+_LC4_B2  = LCELL( _EC2_B);
+
+-- Node name is 'memuo1' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo1', type is output 
+memuo1   =  _LC4_B2;
+
+-- Node name is 'memuo2~1' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo2~1', location is LC2_B8, type is buried.
+-- synthesized logic cell 
+_LC2_B8  = LCELL( _EC10_B);
+
+-- Node name is 'memuo2' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo2', type is output 
+memuo2   =  _LC2_B8;
+
+-- Node name is 'memuo3~1' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo3~1', location is LC7_B25, type is buried.
+-- synthesized logic cell 
+_LC7_B25 = LCELL( _EC3_B);
+
+-- Node name is 'memuo3' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo3', type is output 
+memuo3   =  _LC7_B25;
+
+-- Node name is 'memuo4~1' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo4~1', location is LC2_B30, type is buried.
+-- synthesized logic cell 
+_LC2_B30 = LCELL( _EC9_B);
+
+-- Node name is 'memuo4' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo4', type is output 
+memuo4   =  _LC2_B30;
+
+-- Node name is 'memuo5~1' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo5~1', location is LC5_B2, type is buried.
+-- synthesized logic cell 
+_LC5_B2  = LCELL( _EC4_B);
+
+-- Node name is 'memuo5' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo5', type is output 
+memuo5   =  _LC5_B2;
+
+-- Node name is 'memuo6~1' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo6~1', location is LC1_B7, type is buried.
+-- synthesized logic cell 
+_LC1_B7  = LCELL( _EC15_B);
+
+-- Node name is 'memuo6' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo6', type is output 
+memuo6   =  _LC1_B7;
+
+-- Node name is 'memuo7~1' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo7~1', location is LC7_B20, type is buried.
+-- synthesized logic cell 
+_LC7_B20 = LCELL( _EC8_B);
+
+-- Node name is 'memuo7' from file "cu.tdf" line 47, column 7
+-- Equation name is 'memuo7', type is output 
+memuo7   =  _LC7_B20;
+
+-- Node name is '|ip:ipi|curr0' from file "ip.tdf" line 9, column 6
+-- Equation name is '_LC1_B20', type is buried 
+_LC1_B20 = DFFE( _EQ001, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ001 =  _LC1_B20 &  _LC6_B2
+         #  _EC8_B & !_LC6_B2;
+
+-- Node name is '|ip:ipi|curr1' from file "ip.tdf" line 9, column 6
+-- Equation name is '_LC8_B2', type is buried 
+_LC8_B2  = DFFE( _EQ002, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ002 =  _LC6_B2 &  _LC8_B2
+         #  _EC15_B & !_LC6_B2;
+
+-- Node name is '|ip:ipi|curr2' from file "ip.tdf" line 9, column 6
+-- Equation name is '_LC7_B2', type is buried 
+_LC7_B2  = DFFE( _EQ003, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ003 =  _LC6_B2 &  _LC7_B2
+         #  _EC4_B & !_LC6_B2;
+
+-- Node name is '|ip:ipi|curr3' from file "ip.tdf" line 9, column 6
+-- Equation name is '_LC4_B25', type is buried 
+_LC4_B25 = DFFE( _EQ004, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ004 = !_LC4_B25 &  _LC6_B2
+         #  _EC9_B & !_LC6_B2;
+
+-- Node name is '|ip:ipi|curr4' from file "ip.tdf" line 9, column 6
+-- Equation name is '_LC8_B25', type is buried 
+_LC8_B25 = DFFE( _EQ005, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ005 =  _EC3_B & !_LC6_B2
+         #  _LC4_B25 &  _LC6_B2 & !_LC8_B25
+         # !_LC4_B25 &  _LC6_B2 &  _LC8_B25;
+
+-- Node name is '|ip:ipi|curr5' from file "ip.tdf" line 9, column 6
+-- Equation name is '_LC3_B25', type is buried 
+_LC3_B25 = DFFE( _EQ006, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ006 =  _LC3_B25 & !_LC4_B25 &  _LC6_B2
+         #  _LC3_B25 &  _LC6_B2 & !_LC8_B25
+         # !_LC3_B25 &  _LC4_B25 &  _LC6_B2 &  _LC8_B25;
+
+-- Node name is '|ip:ipi|curr6' from file "ip.tdf" line 9, column 6
+-- Equation name is '_LC5_B25', type is buried 
+_LC5_B25 = DFFE( _EQ007, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ007 = !_LC2_B25 &  _LC5_B25 &  _LC6_B2
+         #  _LC2_B25 & !_LC5_B25 &  _LC6_B2;
+
+-- Node name is '|ip:ipi|curr7' from file "ip.tdf" line 9, column 6
+-- Equation name is '_LC6_B25', type is buried 
+_LC6_B25 = DFFE( _EQ008, GLOBAL( clk),  VCC,  VCC,  VCC);
+  _EQ008 = !_LC5_B25 &  _LC6_B2 &  _LC6_B25
+         # !_LC2_B25 &  _LC6_B2 &  _LC6_B25
+         #  _LC2_B25 &  _LC5_B25 &  _LC6_B2 & !_LC6_B25;
+
+-- Node name is '|ip:ipi|:77' from file "ip.tdf" line 13, column 49
+-- Equation name is '_LC2_B25', type is buried 
+_LC2_B25 = LCELL( _EQ009);
+  _EQ009 =  _LC3_B25 &  _LC4_B25 &  _LC8_B25;
+
+-- Node name is ':144' from file "cu.tdf" line 40, column 3
+-- Equation name is '_LC6_B2', type is buried 
+_LC6_B2  = LCELL( _EQ010);
+  _EQ010 =  _EC14_B
+         # !_EC2_B
+         # !_EC10_B;
+
+-- Node name is '|memu:memui|lpm_rom:mem|altrom:srom|segment0_0' from file "altrom.tdf" line 92, column 11
+-- Equation name is '_EC8_B', type is memory 
+_EC8_B   = MEMORY_SEGMENT( VCC, VCC, VCC, GND, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, VCC, VCC, VCC);
+
+-- Node name is '|memu:memui|lpm_rom:mem|altrom:srom|segment0_1' from file "altrom.tdf" line 92, column 11
+-- Equation name is '_EC15_B', type is memory 
+_EC15_B  = MEMORY_SEGMENT( VCC, VCC, VCC, GND, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, VCC, VCC, VCC);
+
+-- Node name is '|memu:memui|lpm_rom:mem|altrom:srom|segment0_2' from file "altrom.tdf" line 92, column 11
+-- Equation name is '_EC4_B', type is memory 
+_EC4_B   = MEMORY_SEGMENT( VCC, VCC, VCC, GND, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, VCC, VCC, VCC);
+
+-- Node name is '|memu:memui|lpm_rom:mem|altrom:srom|segment0_3' from file "altrom.tdf" line 92, column 11
+-- Equation name is '_EC9_B', type is memory 
+_EC9_B   = MEMORY_SEGMENT( VCC, VCC, VCC, GND, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, VCC, VCC, VCC);
+
+-- Node name is '|memu:memui|lpm_rom:mem|altrom:srom|segment0_4' from file "altrom.tdf" line 92, column 11
+-- Equation name is '_EC3_B', type is memory 
+_EC3_B   = MEMORY_SEGMENT( VCC, VCC, VCC, GND, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, VCC, VCC, VCC);
+
+-- Node name is '|memu:memui|lpm_rom:mem|altrom:srom|segment0_5' from file "altrom.tdf" line 92, column 11
+-- Equation name is '_EC10_B', type is memory 
+_EC10_B  = MEMORY_SEGMENT( VCC, VCC, VCC, GND, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, VCC, VCC, VCC);
+
+-- Node name is '|memu:memui|lpm_rom:mem|altrom:srom|segment0_6' from file "altrom.tdf" line 92, column 11
+-- Equation name is '_EC2_B', type is memory 
+_EC2_B   = MEMORY_SEGMENT( VCC, VCC, VCC, GND, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, VCC, VCC, VCC);
+
+-- Node name is '|memu:memui|lpm_rom:mem|altrom:srom|segment0_7' from file "altrom.tdf" line 92, column 11
+-- Equation name is '_EC14_B', type is memory 
+_EC14_B  = MEMORY_SEGMENT( VCC, VCC, VCC, GND, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, _LC1_B20, _LC8_B2, _LC7_B2, _LC4_B25, _LC8_B25, _LC3_B25, _LC5_B25, _LC6_B25, VCC, VCC, VCC, VCC, VCC, VCC);
+
+
+
+Project Information                            c:\maxplus2\projects\cpu\cu.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Multi-Level
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'ACEX1K' family
+
+      CARRY_CHAIN                         = ignore
+      CARRY_CHAIN_LENGTH                  = 32
+      CASCADE_CHAIN                       = ignore
+      CASCADE_CHAIN_LENGTH                = 2
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SUBFACTOR_EXTRACTION                = on
+      IGNORE_SOFT_BUFFERS                 = on
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Use Quartus Fitter                        = on
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:01
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:01
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 50,098K
