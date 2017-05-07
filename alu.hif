@@ -28,8 +28,8 @@ FILES
 	{
 		summator [USE_LPM_FOR_AHDL_OPERATORS] []
 		{
-			2 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [s,cout,a,b,cin];
-			1 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [s,a,b,cin];
+			1 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [cin,b,a,s];
+			2 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [cin,b,a,cout,s];
 		}
 	}
 	alu.tdf
@@ -44,13 +44,13 @@ TREE
 {
 	alu::(0,0):(0): alu.tdf
 	{
-		summator:1:(9,5):(52,sum7): summator.tdf;
-		summator:2:(9,5):(58,sum6): summator.tdf;
-		summator:2:(9,5):(64,sum5): summator.tdf;
-		summator:2:(9,5):(70,sum4): summator.tdf;
-		summator:2:(9,5):(76,sum3): summator.tdf;
-		summator:2:(9,5):(82,sum2): summator.tdf;
-		summator:2:(9,5):(88,sum1): summator.tdf;
 		summator:2:(9,5):(94,sum0): summator.tdf;
+		summator:2:(9,5):(88,sum1): summator.tdf;
+		summator:2:(9,5):(82,sum2): summator.tdf;
+		summator:2:(9,5):(76,sum3): summator.tdf;
+		summator:2:(9,5):(70,sum4): summator.tdf;
+		summator:2:(9,5):(64,sum5): summator.tdf;
+		summator:2:(9,5):(58,sum6): summator.tdf;
+		summator:1:(9,5):(52,sum7): summator.tdf;
 	}
 }

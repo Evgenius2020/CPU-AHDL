@@ -40,7 +40,7 @@ RESERVED                         : 8
 RESERVED                         : 9
 RESERVED                         : 10
 RESERVED                         : 11
-in4                              : 12
+in3                              : 12
 out6                             : 13
 RESERVED                         : 14
 GND                              : 15
@@ -54,14 +54,14 @@ RESERVED                         : 22
 RESERVED                         : 23
 VCCIO                            : 24
 GND                              : 25
-in7                              : 26
-in6                              : 27
+in6                              : 26
+in5                              : 27
 RESERVED                         : 28
 RESERVED                         : 29
-in0                              : 30
+e                                : 30
 RESERVED                         : 31
 RESERVED                         : 32
-RESERVED                         : 33
+in7                              : 33
 TMS                              : 34
 nSTATUS                          : 35
 RESERVED                         : 36
@@ -127,7 +127,7 @@ RESERVED                         : 95
 RESERVED                         : 96
 RESERVED                         : 97
 RESERVED                         : 98
-in5                              : 99
+in4                              : 99
 RESERVED                         : 100
 RESERVED                         : 101
 out7                             : 102
@@ -145,7 +145,7 @@ RESERVED                         : 113
 RESERVED                         : 114
 VCCIO                            : 115
 RESERVED                         : 116
-in3                              : 117
+in2                              : 117
 out1                             : 118
 RESERVED                         : 119
 RESERVED                         : 120
@@ -160,7 +160,7 @@ RESERVED                         : 128
 GND                              : 129
 RESERVED                         : 130
 RESERVED                         : 131
-in2                              : 132
+in1                              : 132
 RESERVED                         : 133
 VCCIO                            : 134
 RESERVED                         : 135
@@ -169,7 +169,7 @@ RESERVED                         : 137
 RESERVED                         : 138
 GND                              : 139
 RESERVED                         : 140
-in1                              : 141
+in0                              : 141
 RESERVED                         : 142
 RESERVED                         : 143
 RESERVED                         : 144
