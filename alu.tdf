@@ -2,23 +2,12 @@ include "summator.inc";
 
 subdesign alu
 (
-	a[7..0], b[7..0], cmd : input;
-	q[7..0] : output;
+	a[0..7], b[0..7], cmd[0..2] : input;
+	q[0..7] : output;
 )
-variable
-	sum[7..0] : summator;
 begin
-	case cmd is
-		when 0 =>
-			sum[0].a = a[0];
-			sum[0].b = b[0];
-			sum[0].cin = gnd;
-			q[0] = sum[0].s;
-			for i in 1 to 7 generate 
-				sum[i].a = a[i];
-				sum[i].b = b[i];
-				sum[i].cin = sum[i - 1].cout;
-				q[i] = sum[i].s;
-			end generate;
+	case cmd[] is
+		when 2 =>
+			q[] = a + b;
 	end case;	
 end;

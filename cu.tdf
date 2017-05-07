@@ -19,6 +19,7 @@ variable
 	iri: ir;
 	ipi: ip;
 	memui: memu;
+	alui: alu;
 begin
 	acci.clk = clk;
 	acci.e = gnd;
@@ -37,9 +38,16 @@ begin
 	memui.data[] = (0, arg[]);
 
 	CASE cmd[] IS
+		when 1 => --set
+			acci.e = vcc;
+		when 2 => --add
+			alui.a[] = acci.out[];
+			alui.b[] = (0, arg[]);
+			alui.cmd[] = cmd[];
+			acci.e = vcc;
+			acci.in[] = alui.q[];
 		WHEN 3 => --jmp
-			ipi.we = vcc;	
-			ipi.newValue[] = (0, arg[]);
+			ipi.we = vcc;
 	END CASE;
 	
 

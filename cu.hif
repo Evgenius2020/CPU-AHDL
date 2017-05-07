@@ -24,6 +24,14 @@ HIF003
 --
 FILES
 {
+	alu.tdf
+	{
+		alu [USE_LPM_FOR_AHDL_OPERATORS] [summator.inc]
+		{
+			11 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [q0,q1,q2,q3,q4,q5,q6,q7,a0,a1,a2,a3,a4,a5,a6,a7,b0,b1,b2,b3,b4,b5,b6,b7,cmd0,cmd1,cmd2];
+			10 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [q0,q1,q2,q3,q4,q5,q6,q7,a0,a1,a2,a3,a4,a5,a6,a7,b0,b1,b2,b3,b4,b5,b6,b7];
+		}
+	}
 	altrom.tdf
 	{
 		altrom [DEVICE_FAMILY,REGISTERINPUTMODE=DEFAULT,FILE,NUMWORDS,AD_WIDTH,WIDTH,USE_LPM_FOR_AHDL_OPERATORS] [memmodes.inc,lpm_decode.inc,lpm_mux.inc,aglobal.inc]
@@ -91,5 +99,6 @@ TREE
 				altrom:9:(63,3):(46,srom): altrom.tdf;
 			}
 		}
+		alu:11:(22,2):(133,alui): alu.tdf;
 	}
 }

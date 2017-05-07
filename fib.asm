@@ -1,8 +1,4 @@
-res = 0;
-prev = 1;
-while (n--) {
-    res += prev;
-    curr = prev;
-    prev = res;
-    res = curr;
-}
+set 0
+set 8
+add 7
+jmp 0

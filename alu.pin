@@ -42,7 +42,7 @@ RESERVED                         : 10
 RESERVED                         : 11
 a4                               : 12
 q6                               : 13
-RESERVED                         : 14
+cmd2                             : 14
 GND                              : 15
 VCCINT                           : 16
 b5                               : 17
@@ -76,7 +76,7 @@ RESERVED                         : 44
 VCCIO                            : 45
 RESERVED                         : 46
 b3                               : 47
-RESERVED                         : 48
+cmd1                             : 48
 RESERVED                         : 49
 VCCINT                           : 50
 q0                               : 51
@@ -87,7 +87,7 @@ GND                              : 55
 GND                              : 56
 GND_CKLK                         : 57
 GND                              : 58
-cmd                              : 59
+cmd0                             : 59
 RESERVED                         : 60
 VCCIO                            : 61
 RESERVED                         : 62
