@@ -1,0 +1,15 @@
+subdesign ir
+(
+	in[0..7]: input;
+	cmd[0..2]: output;
+	arg[0..4]: output;
+)
+begin
+	FOR i IN 0 to 2 GENERATE
+		cmd[i] = in[i];
+	END GENERATE;
+
+	FOR i IN 3 to 7 GENERATE
+		arg[i - 3] = in[i];
+	END GENERATE;
+end;
