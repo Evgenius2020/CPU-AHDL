@@ -20,7 +20,7 @@
 
 -- MAX+plus II Include File
 -- Version 9.6 3/22/2000
--- Created: Sun May 07 19:20:26 2017
+-- Created: Mon May 08 10:50:08 2017
 
-FUNCTION memu (addr[0..7], data[0..7], we)
+FUNCTION memu (addr[0..7], data[0..7], we, clk)
     RETURNS (result[0..7]);

@@ -1,21 +1,26 @@
-include "lpm_rom.inc";
+include "lpm_ram_dq.inc";
 
 subdesign memu
 (
 	addr[0..7] : input;
 	data[0..7] : input;
 	we: input;
+	clk: input;
 	result[0..7] : output;
 )
 variable
-	mem: lpm_rom with (
+	mem: lpm_ram_dq with (
 		LPM_WIDTH = 8, 
 		LPM_WIDTHAD = 8,
-		LPM_ADDRESS_CONTROL = UNREGISTERED,
+		LPM_ADDRESS_CONTROL = REGISTERED,
+		LPM_INDATA = REGISTERED,
 		LPM_OUTDATA = UNREGISTERED,
- 		LPM_FILE = "commands.mif");
+ 		LPM_FILE = "fib.mif");
 begin
+	mem.inclock = clk;
 	mem.address[] = addr[];
+	mem.we = we;
+	mem.data[] = data[];
 	result[] = mem.q[];
 end;
 
