@@ -1,13 +1,13 @@
 subdesign alu
 (
 	a[0..7], b[0..7], cmd[0..2] : input;
-	q[0..7] : output;
+	out[0..7] : output;
 )
 begin
 	case cmd[] is
 		when 1 => --add
-			q[] = a + b;
+			out[] = a[] + b[];
 		when 2 => --sub
-			q[] = a - b;
+			out[] = a[] - b[];
 	end case;	
 end;

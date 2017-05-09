@@ -1,6 +1,6 @@
 subdesign acc
 (
-	e: input;
+	we: input;
 	in[7..0] : input;
 	clk : input;
 	out[7..0] : output;
@@ -9,7 +9,7 @@ variable
 	d[7..0] : dffe;
 begin
 	for i in 0 to 7 generate
-		d[i].ena = e;
+		d[i].ena = we;
 		d[i].clk = clk;
 		d[i].d = in[i];
 		out[i] = d[i].q;

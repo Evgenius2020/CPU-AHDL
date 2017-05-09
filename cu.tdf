@@ -2,78 +2,82 @@ include "acc.inc";
 include "alu.inc";
 include "ip.inc";
 include "ir.inc";
-include "memu.inc";
+include "rom.inc";
+include "ram.inc";
 
 subdesign cu
 (
 	clk: input;
 	acco[0..7]: output;
-	memuo[0..7]: output;
+	romo[0..7]: output;
 	cmdo[0..2]: output;
 	argo[0..4]: output;
 )
 variable
-	cmd[0..2]: node;
-	arg[0..4]: node;
+	cmd[0..2]: dff;
+	arg[0..4]: dff;
 	acci: acc;
 	iri: ir;
 	ipi: ip;
-	memui: memu;
+	romi: rom;
+	rami: ram;
 	alui: alu;
 begin
 	acci.clk = clk;
-	acci.e = gnd;
-	acci.in[] = (0, arg[]);
+	acci.we = gnd;
 
 	ipi.clk = clk;
 	ipi.we = gnd;
-	ipi.newValue[] = (0, arg[]);
 
-	iri.in[] =  memui.result[];
+	iri.in[] =  romi.out[];
+	cmd[].clk = clk;
+	arg[].clk = clk;
 	arg[]= iri.arg[];
 	cmd[] = iri.cmd[];
 	
-	memui.we = gnd;
-	memui.addr[] = ipi.addr[];
-	memui.data[] = (0, arg[]);
-	memui.clk = clk;
+	romi.addr[] = ipi.out[];
+	rami.clk = clk;
+	rami.we = gnd;
 
 	CASE cmd[] IS
-		when 1 => --add
+		when 1 => --add 
+			alui.cmd[] = cmd[]; 
 			alui.a[] = acci.out[];
-			memui.addr[] = (0,arg[]);
-			alui.b[] = memui.result[];
-			alui.cmd[] = cmd[];
-			acci.e = vcc;
-			acci.in[] = alui.q[];
-		when 2 => --sub
+			rami.addr[] = (0, arg[]);
+			alui.b[] = rami.out[];
+			acci.we = vcc;
+			acci.in[] = alui.out[];
+		when 1 => --sub
+			alui.cmd[] = cmd[]; 
 			alui.a[] = acci.out[];
-			memui.addr[] = (0,arg[]);
-			alui.b[] = memui.result[];
-			alui.cmd[] = cmd[];
-			acci.e = vcc;
-			acci.in[] = alui.q[];
+			rami.addr[] = (0, arg[]);
+			alui.b[] = rami.out[];
+			acci.we = vcc;
+			acci.in[] = alui.out[];
 		when 3 => --load
-			memui.addr[] = (0, arg[]);
-			acci.e = vcc;
-			acci.in[] = memui.result[];
+			acci.we = vcc;
+			rami.addr[] = (0, arg[]);
+			acci.in[] = rami.out[];
 		when 4 => --store
-			memui.we = vcc;
-			memui.addr[] = (0, arg[]);
-			memui.data[] = acci.out[];
-		when 5 => --set
-			acci.e = vcc;
-		WHEN 6 => --jmp
+			rami.we = vcc;
+			rami.addr[] = (0,arg[]);
+			rami.data[] = acci.out[];
+		when 5 => --set 
+			acci.we = vcc;
+			acci.in[] = (0, arg[]);
+		when 6 => --jmp
 			ipi.we = vcc;
-		when 7 => --jz
-			IF (acci.out[] == 0) THEN
-				ipi.we = vcc; 
-			END IF;
+			ipi.newValue[] = (0, arg[]);
+		when 7=> --jz
+			if (acci.out[] == 0) then
+				ipi.we = vcc;
+				ipi.newValue[] = (0, arg[]);
+			end if;
 	END CASE;
 	
 
 	acco[] = acci.out[];
-	memuo[] = memui.result[];
+	romo[] = romi.out[];
 	argo[] = arg[];
-	cmdo[] = cmd;
+	cmdo[] = cmd[];
 end;

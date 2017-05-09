@@ -20,7 +20,7 @@
 
 -- MAX+plus II Include File
 -- Version 9.6 3/22/2000
--- Created: Sun May 07 19:18:13 2017
+-- Created: Tue May 09 11:48:01 2017
 
-FUNCTION acc (e, in[7..0], clk)
+FUNCTION acc (we, in[7..0], clk)
     RETURNS (out[7..0]);

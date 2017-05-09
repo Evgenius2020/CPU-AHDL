@@ -1,3 +1,17 @@
+//  fib(n) {
+//  	n -=2;    
+//  	res = 1;
+//  	prev = 1;
+//  	while(n > 0) {
+//		    n--;
+//		    buf = res;
+//		    res = prev;
+//		    prev = buf;
+//		    res += prev;
+//      }
+//	    return res;
+// }
+
 // Commands code binding
 .cmd add 1 addr
 .cmd sub 2 addr
@@ -9,9 +23,48 @@
 
 // Variables definition
 .variable res
+.variable prev
+.variable n
+.variable buf
 
 // Code
-.start
+
+set 2
+store buf
+load n
+sub buf
+store n
+
 set 1
 store res
-jmp .start
+
+set 1
+store prev
+
+.cycle
+load n
+jz .exit
+
+set 1
+store buf
+load n
+sub buf
+store n
+
+load res
+store buf
+
+load prev
+store res
+
+load buf
+store prev
+
+add res
+store res
+
+jmp .cycle
+
+.exit
+load res
+jmp .exit

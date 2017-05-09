@@ -3,7 +3,7 @@ subdesign ip
 	newValue[0..7] : input;
 	we: input;
 	clk: input;
-	addr[0..7] : output;
+	out[0..7] : output;
 )
 variable 
 	curr[7..0]: dffe;
@@ -11,5 +11,5 @@ begin
 	curr[].ena = vcc;
 	curr[].clk = clk;
 	curr[].d = (we and newValue) or (!we and (curr + 1));
-	addr[] = curr[].q;
+	out[] = curr[].q;
 end;

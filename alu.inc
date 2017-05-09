@@ -20,7 +20,7 @@
 
 -- MAX+plus II Include File
 -- Version 9.6 3/22/2000
--- Created: Sun May 07 22:47:45 2017
+-- Created: Tue May 09 11:53:10 2017
 
 FUNCTION alu (a[0..7], b[0..7], cmd[0..2])
-    RETURNS (q[0..7]);
+    RETURNS (out[0..7]);
