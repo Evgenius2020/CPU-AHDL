@@ -36,18 +36,39 @@ begin
 	memui.we = gnd;
 	memui.addr[] = ipi.addr[];
 	memui.data[] = (0, arg[]);
+	memui.clk = clk;
 
 	CASE cmd[] IS
-		when 1 => --set
-			acci.e = vcc;
-		when 2 => --add
+		when 1 => --add
 			alui.a[] = acci.out[];
-			alui.b[] = (0, arg[]);
+			memui.addr[] = (0,arg[]);
+			alui.b[] = memui.result[];
 			alui.cmd[] = cmd[];
 			acci.e = vcc;
 			acci.in[] = alui.q[];
-		WHEN 3 => --jmp
+		when 2 => --sub
+			alui.a[] = acci.out[];
+			memui.addr[] = (0,arg[]);
+			alui.b[] = memui.result[];
+			alui.cmd[] = cmd[];
+			acci.e = vcc;
+			acci.in[] = alui.q[];
+		when 3 => --load
+			memui.addr[] = (0, arg[]);
+			acci.e = vcc;
+			acci.in[] = memui.result[];
+		when 4 => --store
+			memui.we = vcc;
+			memui.addr[] = (0, arg[]);
+			memui.data[] = acci.out[];
+		when 5 => --set
+			acci.e = vcc;
+		WHEN 6 => --jmp
 			ipi.we = vcc;
+		when 7 => --jz
+			IF (acci.out[] == 0) THEN
+				ipi.we = vcc; 
+			END IF;
 	END CASE;
 	
 

@@ -10,6 +10,6 @@ variable
 begin
 	curr[].ena = vcc;
 	curr[].clk = clk;
-	curr[].d = (we and newValue) or (!we and (curr + 8));
+	curr[].d = (we and newValue) or (!we and (curr + 1));
 	addr[] = curr[].q;
 end;

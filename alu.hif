@@ -28,8 +28,8 @@ FILES
 	{
 		summator [USE_LPM_FOR_AHDL_OPERATORS] []
 		{
-			2 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [s,cout,a,b,cin];
-			1 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [s,a,b,cin];
+			1 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [cin,b,a,s];
+			2 [USE_LPM_FOR_AHDL_OPERATORS=OFF] [cin,b,a,cout,s];
 		}
 	}
 	alu.tdf

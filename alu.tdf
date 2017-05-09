@@ -1,5 +1,3 @@
-include "summator.inc";
-
 subdesign alu
 (
 	a[0..7], b[0..7], cmd[0..2] : input;
@@ -7,7 +5,9 @@ subdesign alu
 )
 begin
 	case cmd[] is
-		when 2 =>
+		when 1 => --add
 			q[] = a + b;
+		when 2 => --sub
+			q[] = a - b;
 	end case;	
 end;

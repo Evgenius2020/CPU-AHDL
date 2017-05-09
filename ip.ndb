@@ -6,90 +6,96 @@ Index Hierarchy Path
 ----- --------------
 !	&null_hpath&
 
-The number of name info structs is : 83
+The number of name info structs is : 89
 
 InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
 -------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
 "	IeEA	!	13	39	:100	"X
 #	IeEA	!	13	39	:101	"Y
-$	IeEA	!	13	31	:102	"Z
-%	IeEA	!	13	31	:103	"[
-&	IeEA	!	13	31	:104	"\
-'	IeEA	!	13	31	:105	"]
-(	IeEA	!	13	31	:106	"^
-)	IeEA	!	13	31	:107	"_
+$	IeEA	!	13	39	:102	"Z
+%	IeEA	!	13	39	:103	"[
+&	IeEA	!	13	39	:104	"\
+'	IeEA	!	13	39	:105	"]
+(	IeEA	!	13	39	:106	"^
+)	IeEA	!	13	39	:107	"_
 *	IeEA	!	13	31	:108	"`
 +	IeEA	!	13	31	:109	"a
-,	IeEA	!	13	17	:53	")
--	IeEA	!	13	17	:54	"*
-.	IeEA	!	13	17	:55	"+
-/	IeEA	!	13	17	:56	",
-0	IeEA	!	13	17	:57	"-
-1	IeEA	!	13	17	:58	".
-2	IeEA	!	13	17	:59	"/
-3	IeEA	!	13	17	:60	"0
-4	IeEA	!	13	49	:61	"1
-5	IeEA	!	13	49	:62	"2
-6	IeEA	!	13	49	:63	"3
-7	IeEA	!	13	49	:64	"4
-8	IeEA	!	13	49	:65	"5
-9	IeEA	!	13	49	:66	"6
-:	IeEA	!	13	49	:67	"7
-;	IeEA	!	13	49	:68	"8
-<	IeEA	!	13	49	:69	"9
-=	IeEA	!	13	49	:70	":
->	IeEA	!	13	49	:71	";
-?	IeEA	!	13	49	:72	"<
-@	L8f/	!	13	49	1	i	:73	"=
-A	IeEA	!	13	49	:74	">
-B	IeEA	!	13	49	:75	"?
-C	IeEA	!	13	49	:76	"@
-D	L8f/	!	13	49	1	j	:77	"A
-E	IeEA	!	13	49	:78	"B
-F	IeEA	!	13	49	:79	"C
-G	IeEA	!	13	49	:80	"D
-H	L8f/	!	13	49	1	k	:81	"E
-I	IeEA	!	13	49	:82	"F
-J	IeEA	!	13	49	:83	"G
-K	IeEA	!	13	49	:84	"H
-L	IeEA	!	13	39	:85	"I
-M	IeEA	!	13	39	:86	"J
-N	IeEA	!	13	39	:87	"K
-O	IeEA	!	13	39	:88	"L
-P	IeEA	!	13	39	:89	"M
-Q	IeEA	!	13	39	:90	"N
-R	IeEA	!	13	39	:91	"O
-S	IeEA	!	13	39	:92	"P
-T	IeEA	!	13	39	:93	"Q
-U	IeEA	!	13	39	:94	"R
-V	IeEA	!	13	39	:95	"S
-W	IeEA	!	13	39	:96	"T
-X	IeEA	!	13	39	:97	"U
-Y	IeEA	!	13	39	:98	"V
-Z	IeEA	!	13	39	:99	"W
-[	IeE[	!	14	6	addr0	w
-\	IeE[	!	14	6	addr1	x
-]	IeE[	!	14	6	addr2	y
-^	IeE[	!	14	6	addr3	z
-_	IeE[	!	14	6	addr4	{
-`	IeE[	!	14	6	addr5	|
-a	IeE[	!	14	6	addr6	}
-b	IeE[	!	14	6	addr7	~
-c	(@\6H	!	5	2	8	d	e	f	g	h	i	j	k	clk	v
-d	L8e}	!	9	6	2	b	d	curr0	"(
-e	L8e}	!	9	6	2	a	e	curr1	"'
-f	L8e}	!	9	6	2	`	f	curr2	"&
-g	L8e}	!	9	6	6	_	h	@	D	H	g	curr3	"%
-h	L8e}	!	9	6	5	^	@	D	H	h	curr4	"$
-i	L8e}	!	9	6	4	]	D	H	i	curr5	"#
-j	L8e}	!	9	6	3	\	H	j	curr6	""
-k	L8e}	!	9	6	2	[	k	curr7	"!
-l	L8ef	!	3	10	1	k	newValue0	m
-m	L8ef	!	3	10	1	j	newValue1	n
-n	L8ef	!	3	10	1	i	newValue2	o
-o	L8ef	!	3	10	1	h	newValue3	p
-p	L8ef	!	3	10	1	g	newValue4	q
-q	L8ef	!	3	10	1	f	newValue5	r
-r	L8ef	!	3	10	1	e	newValue6	s
-s	L8ef	!	3	10	1	d	newValue7	t
-t	L8ef	!	4	2	8	d	e	f	g	h	i	j	k	we	u
+,	IeEA	!	13	31	:110	"b
+-	IeEA	!	13	31	:111	"c
+.	IeEA	!	13	31	:112	"d
+/	IeEA	!	13	31	:113	"e
+0	IeEA	!	13	31	:114	"f
+1	IeEA	!	13	31	:115	"g
+2	IeEA	!	13	17	:53	")
+3	IeEA	!	13	17	:54	"*
+4	IeEA	!	13	17	:55	"+
+5	IeEA	!	13	17	:56	",
+6	IeEA	!	13	17	:57	"-
+7	IeEA	!	13	17	:58	".
+8	IeEA	!	13	17	:59	"/
+9	IeEA	!	13	17	:60	"0
+:	IeEA	!	13	49	:61	"1
+;	IeEA	!	13	49	:62	"2
+<	IeEA	!	13	49	:63	"3
+=	IeEA	!	13	49	:64	"4
+>	IeEA	!	13	49	:65	"5
+?	IeEA	!	13	49	:66	"6
+@	L8f/	!	13	49	1	l	:67	"7
+A	IeEA	!	13	49	:68	"8
+B	IeEA	!	13	49	:69	"9
+C	IeEA	!	13	49	:70	":
+D	L8f/	!	13	49	1	m	:71	";
+E	IeEA	!	13	49	:72	"<
+F	IeEA	!	13	49	:73	"=
+G	IeEA	!	13	49	:74	">
+H	L8f/	!	13	49	4	n	L	P	T	:75	"?
+I	IeEA	!	13	49	:76	"@
+J	IeEA	!	13	49	:77	"A
+K	IeEA	!	13	49	:78	"B
+L	L8f/	!	13	49	1	o	:79	"C
+M	IeEA	!	13	49	:80	"D
+N	IeEA	!	13	49	:81	"E
+O	IeEA	!	13	49	:82	"F
+P	L8f/	!	13	49	1	p	:83	"G
+Q	IeEA	!	13	49	:84	"H
+R	IeEA	!	13	49	:85	"I
+S	IeEA	!	13	49	:86	"J
+T	L8f/	!	13	49	1	q	:87	"K
+U	IeEA	!	13	49	:88	"L
+V	IeEA	!	13	49	:89	"M
+W	IeEA	!	13	49	:90	"N
+X	IeEA	!	13	39	:91	"O
+Y	IeEA	!	13	39	:92	"P
+Z	IeEA	!	13	39	:93	"Q
+[	IeEA	!	13	39	:94	"R
+\	IeEA	!	13	39	:95	"S
+]	IeEA	!	13	39	:96	"T
+^	IeEA	!	13	39	:97	"U
+_	IeEA	!	13	39	:98	"V
+`	IeEA	!	13	39	:99	"W
+a	IeE[	!	14	6	addr0	w
+b	IeE[	!	14	6	addr1	x
+c	IeE[	!	14	6	addr2	y
+d	IeE[	!	14	6	addr3	z
+e	IeE[	!	14	6	addr4	{
+f	IeE[	!	14	6	addr5	|
+g	IeE[	!	14	6	addr6	}
+h	IeE[	!	14	6	addr7	~
+i	(@\6H	!	5	2	8	j	k	l	m	n	o	p	q	clk	v
+j	L8e}	!	9	6	6	h	k	@	D	H	j	curr0	"(
+k	L8e}	!	9	6	5	g	@	D	H	k	curr1	"'
+l	L8e}	!	9	6	4	f	D	H	l	curr2	"&
+m	L8e}	!	9	6	3	e	H	m	curr3	"%
+n	L8e}	!	9	6	5	d	L	P	T	n	curr4	"$
+o	L8e}	!	9	6	4	c	P	T	o	curr5	"#
+p	L8e}	!	9	6	3	b	T	p	curr6	""
+q	L8e}	!	9	6	2	a	q	curr7	"!
+r	L8ef	!	3	10	1	q	newValue0	m
+s	L8ef	!	3	10	1	p	newValue1	n
+t	L8ef	!	3	10	1	o	newValue2	o
+u	L8ef	!	3	10	1	n	newValue3	p
+v	L8ef	!	3	10	1	m	newValue4	q
+w	L8ef	!	3	10	1	l	newValue5	r
+x	L8ef	!	3	10	1	k	newValue6	s
+y	L8ef	!	3	10	1	j	newValue7	t
+z	L8ef	!	4	2	8	j	k	l	m	n	o	p	q	we	u

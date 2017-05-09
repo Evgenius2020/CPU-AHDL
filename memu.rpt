@@ -2,7 +2,7 @@ Project Information                          c:\maxplus2\projects\cpu\memu.rpt
 
 MAX+plus II Compiler Report File
 Version 9.6 3/22/2000
-Compiled: 05/08/2017 10:47:17
+Compiled: 05/08/2017 14:07:09
 
 Copyright (C) 1988-2000 Altera Corporation
 Any megafunction design, and related net list (encrypted or decrypted),
@@ -637,9 +637,9 @@ Compilation Times
    Database Builder                       00:00:00
    Logic Synthesizer                      00:00:00
    Partitioner                            00:00:00
-   Fitter                                 00:00:00
+   Fitter                                 00:00:01
    Timing SNF Extractor                   00:00:00
-   Assembler                              00:00:01
+   Assembler                              00:00:00
    --------------------------             --------
    Total Time                             00:00:01
 
@@ -647,4 +647,4 @@ Compilation Times
 Memory Allocated
 -----------------
 
-Peak memory allocated during compilation  = 24,528K
+Peak memory allocated during compilation  = 33,972K
