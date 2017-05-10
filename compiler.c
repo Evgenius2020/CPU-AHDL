@@ -3,14 +3,14 @@
 #include <string.h>
 
 typedef struct Macros {
-    char key[16];
-    int value;
+	char key[16];
+	int value;
 	char isNumCmd;
 	struct Macros* next;
 } Macros;
 
 Macros* createMacros() {
-    Macros* macros = malloc(sizeof(Macros));
+	Macros* macros = malloc(sizeof(Macros));
 	macros->next = NULL;
 	macros->isNumCmd = 0;
 	return macros;
@@ -75,6 +75,7 @@ void compile(FILE* in, FILE* out) {
 	Insctruction* instructionQueueEnd = NULL;
 	int currPos = 0;
 	int codePos = 0;
+	int arg;
 
 	while (!feof(in)) {
 		fscanf(in, "%s", curr);
@@ -90,6 +91,9 @@ void compile(FILE* in, FILE* out) {
 			}
 			else if (!strcmp(curr, ".variable")) {
 				fscanf(in, "%s", macros->key);
+				// Initialization
+				fscanf(in, "%d", &arg);
+				fprintf(out, "%d : %d;\n", currPos, arg);
 				macros->value = currPos;
 				currPos += 1;
 				codePos += 1;
@@ -152,23 +156,23 @@ void compile(FILE* in, FILE* out) {
 }
 
 void main(int argc, char* argv[]) {
-    if (argc != 3) {
-        return;
-    }
-    FILE* in = fopen(argv[1], "r");
-    FILE* out = fopen(argv[2], "w");
-    if (!in || !out) {
-        return;
-    }
+	if (argc != 3) {
+		return;
+	}
+	FILE* in = fopen(argv[1], "r");
+	FILE* out = fopen(argv[2], "w");
+	if (!in || !out) {
+		return;
+	}
 
-    fprintf(out, "DEPTH = 256;\n");
-    fprintf(out, "WIDTH = 8;\n");
-    fprintf(out, "ADDRESS_RADIX = DEC;\n");
-    fprintf(out, "DATA_RADIX = DEC;\n");
-    fprintf(out, "CONTENT BEGIN\n");
+	fprintf(out, "DEPTH = 256;\n");
+	fprintf(out, "WIDTH = 8;\n");
+	fprintf(out, "ADDRESS_RADIX = DEC;\n");
+	fprintf(out, "DATA_RADIX = DEC;\n");
+	fprintf(out, "CONTENT BEGIN\n");
 	compile(in, out);
-    fprintf(out, "END;\n");
+	fprintf(out, "END;\n");
 
 	fclose(in);
 	fclose(out);
-}   
+}

@@ -22,13 +22,12 @@
 .cmd jz 7 addr
 
 // Variables definition
-.variable res
-.variable prev
-.variable n
-.variable buf
+.variable res 0
+.variable prev 0
+.variable n 6
+.variable buf 0
 
 // Code
-
 set 2
 store buf
 load n

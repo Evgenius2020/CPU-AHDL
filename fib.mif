@@ -3,7 +3,10 @@ WIDTH = 8;
 ADDRESS_RADIX = DEC;
 DATA_RADIX = DEC;
 CONTENT BEGIN
+0 : 0;
+1 : 0;
 2 : 6;
+3 : 0;
 4 : 162;
 5 : 131;
 6 : 98;
