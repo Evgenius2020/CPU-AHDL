@@ -2,7 +2,7 @@ Project Information                           c:\maxplus2\projects\cpu\ram.rpt
 
 MAX+plus II Compiler Report File
 Version 9.6 3/22/2000
-Compiled: 05/09/2017 14:15:32
+Compiled: 05/10/2017 13:37:23
 
 Copyright (C) 1988-2000 Altera Corporation
 Any megafunction design, and related net list (encrypted or decrypted),
@@ -44,22 +44,6 @@ User Pins:                 18     8      0
 
 
 Project Information                           c:\maxplus2\projects\cpu\ram.rpt
-
-** PROJECT COMPILATION MESSAGES **
-
-Warning: Line 5, File c:\maxplus2\projects\cpu\ram.tdf:
-   Group MSB will be "addr0", overrides default order of bits or BIT0=LSB in Options Statement
-Warning: Line 6, File c:\maxplus2\projects\cpu\ram.tdf:
-   Group MSB will be "data0", overrides default order of bits or BIT0=LSB in Options Statement
-Warning: Line 9, File c:\maxplus2\projects\cpu\ram.tdf:
-   Group MSB will be "out0", overrides default order of bits or BIT0=LSB in Options Statement
-Warning: Line 16, File c:\maxplus2\projects\cpu\ram.tdf:
-   Constant "REGISTERED" has not been defined -- assuming "REGISTERED" was intended to be a quoted string
-Warning: Line 15, File c:\maxplus2\projects\cpu\ram.tdf:
-   Constant "REGISTERED" has not been defined -- assuming "REGISTERED" was intended to be a quoted string
-Warning: Line 17, File c:\maxplus2\projects\cpu\ram.tdf:
-   Constant "UNREGISTERED" has not been defined -- assuming "UNREGISTERED" was intended to be a quoted string
-
 
 ** PROJECT TIMING MESSAGES **
 
@@ -652,15 +636,15 @@ Compilation Times
    Compiler Netlist Extractor             00:00:00
    Database Builder                       00:00:00
    Logic Synthesizer                      00:00:00
-   Partitioner                            00:00:00
+   Partitioner                            00:00:01
    Fitter                                 00:00:00
    Timing SNF Extractor                   00:00:00
    Assembler                              00:00:01
    --------------------------             --------
-   Total Time                             00:00:01
+   Total Time                             00:00:02
 
 
 Memory Allocated
 -----------------
 
-Peak memory allocated during compilation  = 35,905K
+Peak memory allocated during compilation  = 23,257K

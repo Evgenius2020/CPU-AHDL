@@ -20,7 +20,7 @@
 
 -- MAX+plus II Include File
 -- Version 9.6 3/22/2000
--- Created: Tue May 09 12:29:11 2017
+-- Created: Thu May 11 09:23:26 2017
 
-FUNCTION ip (newvalue[0..7], we, clk)
+FUNCTION ip (newvalue[0..7], we, stop, clk)
     RETURNS (out[0..7]);

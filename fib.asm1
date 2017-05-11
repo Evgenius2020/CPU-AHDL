@@ -22,7 +22,48 @@
 .cmd jz 7 addr
 
 // Variables definition
-.variable res 6
+.variable res 0
+.variable prev 0
+.variable n 6
+.variable buf 0
 
 // Code
+set 2
+store buf
+load n
+sub buf
+store n
+
+set 1
+store res
+
+set 1
+store prev
+
+.cycle
+load n
+jz .exit
+
+set 1
+store buf
+load n
+sub buf
+store n
+
 load res
+store buf
+
+load prev
+store res
+
+load buf
+store prev
+
+add res
+store res
+
+jmp .cycle
+
+.exit
+load res
+jmp .exit

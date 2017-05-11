@@ -41,7 +41,7 @@ RESERVED                         : 9
 RESERVED                         : 10
 RESERVED                         : 11
 newValue4                        : 12
-addr6                            : 13
+out6                             : 13
 RESERVED                         : 14
 GND                              : 15
 VCCINT                           : 16
@@ -61,7 +61,7 @@ RESERVED                         : 29
 newValue0                        : 30
 RESERVED                         : 31
 RESERVED                         : 32
-we                               : 33
+stop                             : 33
 TMS                              : 34
 nSTATUS                          : 35
 RESERVED                         : 36
@@ -79,7 +79,7 @@ RESERVED                         : 47
 RESERVED                         : 48
 RESERVED                         : 49
 VCCINT                           : 50
-addr0                            : 51
+out0                             : 51
 GND                              : 52
 VCC_CKLK                         : 53
 GND                              : 54
@@ -101,7 +101,7 @@ RESERVED                         : 69
 RESERVED                         : 70
 VCCIO                            : 71
 RESERVED                         : 72
-addr2                            : 73
+out2                             : 73
 nCONFIG                          : 74
 VCCINT                           : 75
 MSEL1                            : 76
@@ -114,12 +114,12 @@ RESERVED                         : 82
 RESERVED                         : 83
 GND                              : 84
 VCCINT                           : 85
-addr3                            : 86
+out3                             : 86
 RESERVED                         : 87
 RESERVED                         : 88
 RESERVED                         : 89
 RESERVED                         : 90
-addr5                            : 91
+out5                             : 91
 RESERVED                         : 92
 GND                              : 93
 VCCIO                            : 94
@@ -130,7 +130,7 @@ RESERVED                         : 98
 newValue5                        : 99
 RESERVED                         : 100
 RESERVED                         : 101
-addr7                            : 102
+out7                             : 102
 VCCINT                           : 103
 GND                              : 104
 TDI                              : 105
@@ -138,7 +138,7 @@ nCE                              : 106
 DCLK                             : 107
 DATA0                            : 108
 RESERVED                         : 109
-RESERVED                         : 110
+we                               : 110
 RESERVED                         : 111
 RESERVED                         : 112
 RESERVED                         : 113
@@ -146,11 +146,11 @@ RESERVED                         : 114
 VCCIO                            : 115
 RESERVED                         : 116
 newValue3                        : 117
-addr1                            : 118
+out1                             : 118
 RESERVED                         : 119
 RESERVED                         : 120
 RESERVED                         : 121
-addr4                            : 122
+out4                             : 122
 GND                              : 123
 GND                              : 124
 GND                              : 125
