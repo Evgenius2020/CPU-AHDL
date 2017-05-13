@@ -23,4 +23,3 @@ begin
 	mem.data[] = data[];
 	out[] = mem.q[];
 end;
-

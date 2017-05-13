@@ -20,7 +20,7 @@
 
 -- MAX+plus II Include File
 -- Version 9.6 3/22/2000
--- Created: Tue May 09 13:45:21 2017
+-- Created: Thu May 11 14:08:10 2017
 
 FUNCTION ram (addr[0..7], data[0..7], we, clk)
     RETURNS (out[0..7]);

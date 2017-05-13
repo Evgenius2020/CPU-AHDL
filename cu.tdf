@@ -1,6 +1,5 @@
 include "acc.inc";
 include "alu.inc";
-include "ip.inc";
 include "ir.inc";
 include "ram.inc";
 
@@ -10,71 +9,103 @@ subdesign cu
 	acco[0..7]: output;
 	ramo[0..7]: output;
 	cmdo[0..2]: output;
+	ipo[0..7]: output;
 	argo[0..4]: output;
 )
 variable
-	cmd[0..2]: dff;
-	arg[0..4]: dff;
-	acci: acc;
+	cumach : MACHINE WITH STATES (S_INIT, S_RECEIVE_INSTRUCTION, S_PARSE_INSTRUCTION, S_MOVE_PTR, S_EXECUTION_PRELOAD, S_EXECUTION);
+	cmd[0..2]: dffe;
+	arg[0..4]: dffe;
 	iri: ir;
-	ipi: ip;
+	ipi: acc;
+	acci: acc;
 	rami: ram;
 	alui: alu;
 begin
-	acci.clk = clk;
-	acci.we = gnd;
-
-	ipi.clk = clk;
-	ipi.we = gnd;
-
-	iri.in[] =  rami.out[];
-	cmd[].clk = clk;
 	arg[].clk = clk;
-	arg[]= iri.arg[];
-	cmd[] = iri.cmd[];
-
+	acci.clk = clk;
+	cmd[].clk = clk;
+	cumach.clk = clk;
+	cumach.reset = gnd;
+	ipi.clk = clk;
 	rami.clk = clk;
+	acci.we = gnd;
+	ipi.we = gnd;
 	rami.we = gnd;
+	cmd[].ena = gnd;
+	arg[].ena = gnd;
 
-	CASE cmd[] IS
-		when 1 => --add 
-			alui.cmd[] = cmd[]; 
-			alui.a[] = acci.out[];
-			rami.addr[] = (0, arg[]);
-			alui.b[] = rami.out[];
+	case cumach is
+		when S_INIT =>
 			acci.we = vcc;
-			acci.in[] = alui.out[];
-		when 2 => --sub
-			alui.cmd[] = cmd[]; 
-			alui.a[] = acci.out[];
-			rami.addr[] = (0, arg[]);
-			alui.b[] = rami.out[];
-			acci.we = vcc;
-			acci.in[] = alui.out[];
-		when 3 => --load
-			acci.we = vcc;
-			rami.addr[] = (0, arg[]);
-			acci.in[] = rami.out[];
-		when 4 => --store
-			rami.we = vcc;
-			rami.addr[] = (0,arg[]);
-			rami.data[] = acci.out[];
-		when 5 => --set 
-			acci.we = vcc;
-			acci.in[] = (0, arg[]);
-		when 6 => --jmp
 			ipi.we = vcc;
-			ipi.newValue[] = (0, arg[]);
-		when 7=> --jz
-			if (acci.out[] == 0) then
-				ipi.we = vcc;
-				ipi.newValue[] = (0, arg[]);
+			acci.in[] = 0;			
+			ipi.in[] = 0;
+			cumach = S_RECEIVE_INSTRUCTION;
+		when S_RECEIVE_INSTRUCTION =>
+			rami.addr[] = ipi.out[];
+			cumach = S_PARSE_INSTRUCTION;
+		when S_PARSE_INSTRUCTION =>
+			iri.in[] = rami.out[];
+			cmd[].ena = vcc;
+			arg[].ena = vcc;
+			cmd[] = iri.cmd[];
+			arg[] = iri.arg[];
+			if (iri.cmd[] == 0) then
+				cumach = S_MOVE_PTR;
+			else
+				cumach = S_EXECUTION_PRELOAD;
 			end if;
-	END CASE;
-	
+		when S_MOVE_PTR =>
+			cmd[].ena = vcc;
+			arg[].ena = vcc;
+			cmd[] = 0;			
+			arg[] = 0;
+			ipi.we = vcc;
+			ipi.in[] = ipi.out[] + 1;
+			cumach = S_RECEIVE_INSTRUCTION;
+		when S_EXECUTION_PRELOAD =>
+			if (cmd[] <= 3) then
+				rami.addr[] = (0, arg[]);
+			end if;
+			cumach = S_EXECUTION;			
+		when S_EXECUTION =>
+			if (cmd[] == 1 or cmd[] == 2) then --add|sub
+				alui.cmd[] = cmd[];
+				alui.a[] = acci.out[];
+				alui.b[] = rami.out[];
+				acci.we = vcc;
+				acci.in[] = alui.out[];
+			end if;
+			if (cmd[] == 3) then --load
+				acci.we = vcc;
+				acci.in[] = rami.out[];				
+			end if; 
+			if (cmd[] == 4) then --store
+				rami.addr[] = (0, arg[]);
+				rami.data[] = acci.out[];
+				rami.we = vcc;				
+			end if;
+			if (cmd[] == 5) then --set
+				acci.we = vcc;
+				acci.in[] = (0, arg[].q);
+			end if;
+			if (cmd[] == 6) then --jmp
+				ipi.we = vcc;
+				ipi.in[] = (0, arg[]);
+			end if;
+			if (cmd[] == 7) then --jz
+				if (acci.out[] == 0) then
+					ipi.we = vcc;
+					ipi.in[] = (0, arg[]);
+				end if;
+			end if;
+			cumach = S_MOVE_PTR;			
+	end case;
 
 	acco[] = acci.out[];
 	ramo[] = rami.out[];
 	argo[] = arg[];
+	ipo[] = ipi.out[];
 	cmdo[] = cmd[];
 end;
