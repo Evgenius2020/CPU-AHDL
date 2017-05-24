@@ -13,7 +13,15 @@ subdesign cu
 	argo[0..4]: output;
 )
 variable
-	cumach : MACHINE WITH STATES (S_INIT, S_RECEIVE_INSTRUCTION, S_PARSE_INSTRUCTION, S_MOVE_PTR, S_EXECUTION_PRELOAD, S_EXECUTION);
+	cumach : MACHINE WITH STATES (
+		S_INIT, 
+		S_RECEIVE_INSTRUCTION, 
+		S_PARSE_INSTRUCTION,
+		S_MOVE_PTR,
+		S_EXECUTION_PRELOAD,
+		S_EXECUTION,
+		S_WAIT
+	);
 	cmd[0..2]: dffe;
 	arg[0..4]: dffe;
 	iri: ir;
@@ -65,7 +73,7 @@ begin
 			ipi.in[] = ipi.out[] + 1;
 			cumach = S_RECEIVE_INSTRUCTION;
 		when S_EXECUTION_PRELOAD =>
-			if (cmd[] <= 3) then
+			if (cmd[] <= 4) then
 				rami.addr[] = (0, arg[]);
 			end if;
 			cumach = S_EXECUTION;			
@@ -82,9 +90,9 @@ begin
 				acci.in[] = rami.out[];				
 			end if; 
 			if (cmd[] == 4) then --store
-				rami.addr[] = (0, arg[]);
 				rami.data[] = acci.out[];
-				rami.we = vcc;				
+				rami.addr[] = (0, arg[]);
+				rami.we = vcc;		
 			end if;
 			if (cmd[] == 5) then --set
 				acci.we = vcc;
@@ -100,7 +108,16 @@ begin
 					ipi.in[] = (0, arg[]);
 				end if;
 			end if;
-			cumach = S_MOVE_PTR;			
+			if (cmd[] == 4) then
+				cumach = S_WAIT;
+			else 
+				cumach = S_MOVE_PTR;			
+			end if;
+		when S_WAIT =>
+			rami.addr[] = (0, arg[]);
+			rami.data[] = acci.out[];			
+			rami.we = gnd;
+			cumach = S_MOVE_PTR; 
 	end case;
 
 	acco[] = acci.out[];
@@ -109,3 +126,5 @@ begin
 	ipo[] = ipi.out[];
 	cmdo[] = cmd[];
 end;
+
+--obko@mail.ru
