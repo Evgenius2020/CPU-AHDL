@@ -100,19 +100,15 @@ begin
 			end if;
 			if (cmd[] == 6) then --jmp
 				ipi.we = vcc;
-				ipi.in[] = (0, arg[]);
+				ipi.in[] = (0, arg[]) - 1;
 			end if;
 			if (cmd[] == 7) then --jz
 				if (acci.out[] == 0) then
 					ipi.we = vcc;
-					ipi.in[] = (0, arg[]);
+					ipi.in[] = (0, arg[]) - 1;
 				end if;
 			end if;
-			if (cmd[] == 4) then
-				cumach = S_WAIT;
-			else 
 				cumach = S_MOVE_PTR;			
-			end if;
 		when S_WAIT =>
 			rami.addr[] = (0, arg[]);
 			rami.data[] = acci.out[];			
